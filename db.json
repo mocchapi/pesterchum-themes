@@ -1,0 +1,18 @@
+{
+	"meta": {
+		"format_version": 1
+	},
+
+	"entries": [ 
+		{
+			"name": "Trollian2.5dark",
+			"author": "(lis)anne",
+			"client": "pesterchum",
+			"download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian2.5dark.zip",
+			"version": 0,
+
+			"source": "https://github.com/mocchapi/pesterchum-themes",
+			"description": "Trollian 2.5 but with a dark chat background",
+		},
+	]
+}
