@@ -1,18 +1,27 @@
 {
-	"meta": {
-		"format_version": 1
-	},
-
-	"entries": [ 
-		{
-			"name": "Trollian2.5dark",
-			"author": "(lis)anne",
-			"client": "pesterchum",
-			"download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian2.5dark.zip",
-			"version": 0,
-
-			"source": "https://github.com/mocchapi/pesterchum-themes",
-			"description": "Trollian 2.5 but with a dark chat background",
-		},
-	]
+    "meta": {
+        "format_version": 1
+    },
+    "entries": [
+        {
+            "name": "trollian2.5dark",
+            "author": "(lis)anne",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian2.5dark",
+            "version": 0,
+            "updated": 1685912436,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Trollian 2.5 but with a dark chat background"
+        },
+        {
+            "name": "test.zip",
+            "author": "unknown",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/test.zip",
+            "version": 0,
+            "updated": 1685913006,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": ""
+        }
+    ]
 }
