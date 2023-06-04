@@ -6,17 +6,19 @@
 import os
 import time
 import json
+import shutil
 import zipfile
 import argparse
 from pathlib import Path
-from shutil import copyfile
+
 
 def write_db(path, db):
     if os.path.exists(path) and os.path.isdir(path):
         raise IsADirectoryError(path)
-    
-    with open(path, 'w') as f:
+
+    with open(path, "w") as f:
         f.write(json.dumps(db, indent=4))
+
 
 def load_db(path):
     if os.path.exists(path):
@@ -34,28 +36,38 @@ def load_db(path):
             "entries": [],
         }
 
+
 def zipto(target, dst):
-    with zipfile.ZipFile(dst, mode="w") as archive:
-        for file_path in dst.rglob("*"):
-            archive.write(
-                file_path,
-                arcname=file_path.relative_to(dst)
-            )
+    print("Compressing", target, "to", dst)
+    with zipfile.ZipFile(
+        dst, mode="w", compression=zipfile.ZIP_DEFLATED, compresslevel=9
+    ) as archive:
+        for file_path in Path(target).rglob("*"):
+            archive.write(file_path, arcname=file_path.relative_to(target))
+
 
 def find_entry(db, name):
+    # Find index of name in db
     for idx, data in enumerate(db["entries"]):
         if data["name"] == name:
             return idx
     return -1
 
+
 def query(question, default=None, noinput=False):
+    question = "> " + question
     if noinput:
+        print(question)
+        print("Defaulting to", default)
         return default
-    out = input(question + ((" [" + str(default)+']') if default != None else "")+': ')
+    out = input(
+        question + ((" [" + str(default) + "]") if default != None else "") + ": "
+    )
     if out == "":
         return default
     else:
         return default
+
 
 def format_entry(
     name,
@@ -78,15 +90,22 @@ def format_entry(
         "description": description,
     }
 
-def zip_pchum_theme_folder(path, ):
+
+def zip_pchum_theme_folder(
+    path,
+):
     pass
+
 
 def parse(args_in):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--database", "-db", type=Path, default=Path("./db.json"), help="Database file"
     )
-    parser.add_argument('--noinput', help="Assume defaults for all queries requiring user input, such as author names.")
+    parser.add_argument(
+        "--noinput",
+        help="Assume defaults for all queries requiring user input, such as author names.",
+    )
     parser.add_argument(
         "--host",
         type=str,
@@ -137,7 +156,6 @@ def parse(args_in):
 
 def main(args):
     db = load_db(args.database)
-    print(db)
 
     match args.command:
         case "ingest":
@@ -150,12 +168,14 @@ def main(args):
                 args.client = "pesterchum"
 
             if args.name == None:
-                args.name = args.target.name
+                if args.target.suffix == ".zip":
+                    args.name = args.target.stem
+                else:
+                    args.name = args.target.name
 
             idx = find_entry(db, args.name)
             has_entry = idx >= 0
 
-            print()
             if has_entry:
                 print(f'Entry "{args.name}" exists (#{idx})')
             else:
@@ -164,7 +184,7 @@ def main(args):
             if args.version == None:
                 if has_entry:
                     args.version = db["entries"][idx]["version"] + 1
-                    print("Version increased to",args.version)
+                    print("Version increased to", args.version)
                 else:
                     args.version = 0
 
@@ -172,7 +192,7 @@ def main(args):
                 if has_entry:
                     args.description = db["entries"][idx]["description"]
                 else:
-                    args.description = query('Description',"",args.noinput)
+                    args.description = query("Description", "", args.noinput)
 
             if args.source == None:
                 if has_entry:
@@ -184,19 +204,26 @@ def main(args):
                 if has_entry:
                     args.author = db["entries"][idx]["author"]
                 else:
-                    args.author = query('Author name',"unknown",args.noinput)
+                    args.author = query("Author name", "unknown", args.noinput)
 
-            dst = str(args.destination) + '/' + args.client + '/' + args.name
+            dst = str(args.destination) + "/" + args.client + "/" + args.target.name
             match args.client:
-                case 'pesterchum':
+                case "pesterchum":
                     print(dst)
-                    if args.target.suffix == '.zip':
-                        copyfile(args.target, dst)
+                    if args.target.suffix == ".zip":
+                        try:
+                            shutil.copyfile(args.target, dst)
+                        except shutil.SameFileError as e:
+                            print("File already in correct location")
+                    elif args.target.is_dir:
+                        zipto(args.target, dst + ".zip")
                     else:
-                        zipto(args.target, dst)
+                        raise Exception(
+                            f"Error ingesting {dst}: Pesterchum themes must be a folder or a .zip file"
+                        )
 
-                    download_name = args.host + args.client + "/" + args.stem + '.zip'
-                case 'godot':
+                    download_name = args.host + args.client + "/" + args.name + ".zip"
+                case "godot":
                     print("Godot not yet supported")
 
             data = format_entry(
@@ -214,8 +241,11 @@ def main(args):
             else:
                 db["entries"].append(data)
 
-            print(db)
+            print("Saving to", args.database)
             write_db(args.database, db)
+            print("All done!")
+            print()
+            print("You can now make a commit <3")
         case _:
             print("Uknown command", args.command)
 

@@ -15,3 +15,12 @@ python3 alter.py ingest <path_to_theme_folder>
 ```
 The `ingest` command can be used to easily add or update a theme. It will make informed guesses at the required fields, such as version number & compatible client, and query the user for ones it cannot guess (defaults can be assumed if you provide `--noinput`).  
 All fields can be overridden if needed, by providing the field name as an optional argument (IE `--version 10`).
+
+
+## In this repository
+- **sources**: source files of themes
+- **themes**: downloadable theme files of themes. `.tres` for pesterchum godot, `.zip` for QT pesterchum
+- **db.json**: the most current database version
+- **format.json**: the annotated structure of db.json entries
+- **alter.py**: the database update tool
+- **README.md**: this file :D
