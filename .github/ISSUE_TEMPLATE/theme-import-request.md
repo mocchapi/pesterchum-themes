@@ -1,6 +1,6 @@
 ---
 name: Theme import request
-about: Describe this issue template's purpose here.
+about: For adding a theme you made. alterntatively you can open a pull request
 title: 'Add theme: THEME_NAME_HERE'
 labels: import request
 assignees: ''
