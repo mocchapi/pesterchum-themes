@@ -15,6 +15,7 @@
 			"download": "https://example.com/trollian_dark.zip", // URL to direct download for this file (required)
 			"version": 0, // Version of the theme, can be used for an auto-update mechanism (required) (must be changed when theme is altered)
 			"updated": 1685902299, // UNIX epoch in UTC of when this entry was last updated (required)
+			"inherits": "", // Name of the theme this entry inherits from. Clients should check if this theme is installed, & do so if not.
 
 			"source": "https://github.com/example", // URL to source code (optional)
 			"description": "", // short description of the theme (optional)

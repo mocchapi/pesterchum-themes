@@ -81,12 +81,14 @@ def format_entry(
     updated=round(time.time()),
     source="",
     description="",
+    inherits="",
 ):
     return {
         "name": name,
         "author": author,
         "client": client,
         "download": download,
+        "inherits": inherits,
         "version": version,
         "updated": updated,
         "source": source,
@@ -139,6 +141,9 @@ def parse(args_in):
     )
     ingest_parser.add_argument(
         "--version", type=int, default=None, help="Override version number"
+    )
+    ingest_parser.add_argument(
+        "--inherits", type=str, default=None, help="Override inherited theme name"
     )
 
     ingest_parser.add_argument(
@@ -209,6 +214,13 @@ def main(args):
                 else:
                     args.author = query("Author name", "unknown", args.noinput)
 
+            if args.inherits == None:
+                # TODO: extract this from style.json
+                if has_entry:
+                    args.inherits = db["entries"][idx]["inherits"]
+                else:
+                    args.inherits = query("Does this theme use `inherits`? if yes enter the name of the theme now. if not, press enter.", "", args.noinput)
+
             dst = str(args.destination) + "/" + args.client + "/" + args.target.name
             match args.client:
                 case "pesterchum":
@@ -237,6 +249,7 @@ def main(args):
                 version=args.version,
                 source=args.source,
                 description=args.description,
+                inherits=args.inherits,
             )
 
             if has_entry:
