@@ -52,6 +52,16 @@
             "updated": 1679515620,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "el gato"
+        },
+        {
+            "name": "pesterchum2.5dark",
+            "author": "(lis)anne",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pesterchum2.5dark.zip",
+            "version": 0,
+            "updated": 1685968188,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Pesterchum 2.5, but with dark chat backgrounds"
         }
     ]
 }
