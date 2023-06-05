@@ -42,6 +42,16 @@
             "updated": 1685927503,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Windows 95 Plus! inspired trollian theme"
+        },
+        {
+            "name": "pibby",
+            "author": "mal",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pibby.zip",
+            "version": 0,
+            "updated": 1685965740,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "el gato"
         }
     ]
 }
