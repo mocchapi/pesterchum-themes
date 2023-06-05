@@ -62,6 +62,26 @@
             "updated": 1685968188,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Pesterchum 2.5, but with dark chat backgrounds"
+        },
+        {
+            "name": "gec",
+            "author": "URAYsan",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec.zip",
+            "version": 0,
+            "updated": 1685988075,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "100gecs theme"
+        },
+        {
+            "name": "gec xl",
+            "author": "URAYsan",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec xl.zip",
+            "version": 0,
+            "updated": 1685988199,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "100 gecs theme, but bigger"
         }
     ]
 }
