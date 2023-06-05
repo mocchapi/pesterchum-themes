@@ -6,6 +6,10 @@ You can fetch a CORS-free raw copy of it at:
 `https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/db.json`  
 The format of the entries can be found in the `format.json` file.  
 
+## What's this for???
+This repo exists to keep track of all the themes that dont get bundled with pesterchum builds (both original qt pesterchum & pesterchum godot). Having this repository provides an easy way to find new themes, push updates to your own themes, & have them all together in one place.  
+It's also a better way of keeping track who made what.
+
 ## Updating the database
 To add a new theme, or update an existing theme, the `alter.py` tool should be used.  
 The `db.json` should not be edited manually.
