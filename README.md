@@ -29,6 +29,7 @@ Made a theme/update? Wanna put it in the repo? awesome!
 Here's what to do:
 - Put your theme source files in the `sources` directory under a folder with the name of your theme
 - Run the alter tool with `python3 alter.py ingest sources/<your_folder_here>`
+- Answer any questions it may ask you
 - Touch nothing else
 - Make a commit & open a PR request on this repository with your changes  
 
