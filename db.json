@@ -12,6 +12,36 @@
             "updated": 1685914844,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Trollian 2.5 but with a dark chat background"
+        },
+        {
+            "name": "pchum95Plus!",
+            "author": "matytoonist",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pchum95Plus!.zip",
+            "version": 0,
+            "updated": 1685927392,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Windows 95 Plus! inspired theme"
+        },
+        {
+            "name": "trollian95",
+            "author": "matytoonist",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian95.zip",
+            "version": 0,
+            "updated": 1685927478,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Windows 95 inspired trollian theme"
+        },
+        {
+            "name": "trollian95Plus!",
+            "author": "matytoonist",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian95Plus!.zip",
+            "version": 0,
+            "updated": 1685927503,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Windows 95 Plus! inspired trollian theme"
         }
     ]
 }

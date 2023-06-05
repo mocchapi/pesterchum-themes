@@ -66,7 +66,7 @@ def query(question, default=None, noinput=False):
     if out == "":
         return default
     else:
-        return default
+        return out
 
 
 def format_entry(
