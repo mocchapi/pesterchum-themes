@@ -39,6 +39,9 @@ def load_db(path):
 
 def zipto(target, dst):
     print("Compressing", target, "to", dst)
+    if os.path.isfile(dst):
+        print("Destination file already exists! Deleting old version...")
+        os.remove(dst)
     with zipfile.ZipFile(
         dst, mode="w", compression=zipfile.ZIP_DEFLATED, compresslevel=9
     ) as archive:
