@@ -56,7 +56,7 @@
             "version": 0,
             "updated": 1679515620,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "el gato"
+            "description": "el gato. Requires this font: https://www.dafont.com/austie-bost-kitten-klub.font"
         },
         {
             "name": "pesterchum2.5dark",
@@ -78,7 +78,7 @@
             "version": 0,
             "updated": 1685988075,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "100gecs theme"
+            "description": "100 gecs theme"
         },
         {
             "name": "gec xl",
