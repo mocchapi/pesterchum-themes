@@ -221,7 +221,7 @@ def main(args):
                 else:
                     args.inherits = query("Does this theme use `inherits`? if yes enter the name of the theme now. if not, press enter.", "", args.noinput)
 
-            dst = str(args.destination) + "/" + args.client + "/" + args.target.name
+            dst = str(args.destination) + "/" + args.client + "/" + args.name
             match args.client:
                 case "pesterchum":
                     print(dst)
