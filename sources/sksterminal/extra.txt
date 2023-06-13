@@ -1,0 +1,9 @@
+SKSTerminal was developed by Mal, using Mocha's Godot Theme Editor
+.
+.
+.
+thanks mocha for developing this amazing software, i would not have had the patience to go thru the js file for all this shit
+.
+.
+.
+the scp/skaianet image is from https://rift-studier.tumblr.com/post/182271037321/sburbcplogo
