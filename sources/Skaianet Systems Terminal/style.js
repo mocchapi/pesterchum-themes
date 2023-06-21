@@ -37,6 +37,7 @@
 			]
 		},
 		"sounds": {
+			"namealarm": "$path/namealarm.wav",
 			"alertsound": "$path/alarm.wav",
 			"memosound": "$path/alarm2.wav",
 			"ceasesound": "$path/cease.wav"
@@ -259,7 +260,7 @@
 			]
 		},
 		"defaultwindow": {
-			"style": "color: #ff00ff33; background: #000000; font-family: 'Dejavu Sans Mono'; font: bold; selection-background-color: #ff919191; border-color: #ff000000; "
+			"style": "color: #ff00ff33; background: #000000; font-family: 'Dejavu Sans Mono'; font: bold; selection-background-color: #ff919191; border-color: #ff00ff33; "
 		},
 		"addchum": {
 			"style": "background-color: #00000000; border-color: #00000000; color: #00000000; background-image: url($path/add.png); ",
@@ -687,7 +688,7 @@
 			"text": "Currently contacting $handle."
 		},
 		"textarea": {
-			"style": "background: 646464; font-size: 14px; font: bold; border: 3px solid 00FF33; text-align: center; margin-right: 10px; margin-left: 10px; font-family: 'Dejavu Sans Mono'; color: #ff00ff33; background-color: #8700ff33; "
+			"style": "background: 646464; font-size: 14px; font: bold; border: 3px solid 00FF33; text-align: center; margin-right: 10px; margin-left: 10px; font-family: 'Dejavu Sans Mono'; color: #ff00ff33; background-color: #4800ff33; "
 		},
 		"input": {
 			"style": "color: #ff00ff33; background: 646464; border: 3px solid 00FF33; margin-top: 5px; margin-right: 10px; margin-left: 10px; font-size: 12px; font-family: 'Dejavu Sans Mono'; background-color: #ff000000; "
@@ -750,7 +751,7 @@
 			"style": "color: #ff00ff33; background: 646464; border: 3px solid 00FF33; margin-top: 5px; margin-right: 10px; margin-left: 10px; font-size: 12px; background-color: #ff000000; "
 		},
 		"textarea": {
-			"style": "color: #ff00ff33; background: 646464; font-size: 14px; font: bold; border: 3px solid 00FF33; text-align: center; margin-right: 10px; margin-left: 10px; background-color: #8700ff33; "
+			"style": "color: #ff00ff33; background: 646464; font-size: 14px; font: bold; border: 3px solid 00FF33; text-align: center; margin-right: 10px; margin-left: 10px; background-color: #4800ff33; "
 		},
 		"margins": {
 			"top": 0,

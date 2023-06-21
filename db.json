@@ -108,8 +108,8 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/Skaianet Systems Terminal.zip",
             "inherits": "",
-            "version": 1,
-            "updated": 1686686218,
+            "version": 2,
+            "updated": 1687371667,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Terminal theme. Requires the included dejavu mono font to be installed"
         }
