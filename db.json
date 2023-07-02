@@ -119,8 +119,8 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM.zip",
             "inherits": "",
-            "version": 0,
-            "updated": 1688325194,
+            "version": 1,
+            "updated": 1688340894,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Caliborn used, with personalised stickers & sketches"
         },
