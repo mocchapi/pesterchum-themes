@@ -112,6 +112,50 @@
             "updated": 1687371667,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Terminal theme. Requires the included dejavu mono font to be installed"
+        },
+        {
+            "name": "JEERUBIUM",
+            "author": "mal",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1688325194,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "An imagining of the client Caliborn used, with personalised stickers & sketches"
+        },
+        {
+            "name": "JEERUBIUM REDUX",
+            "author": "mal",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM REDUX.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1688325429,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "An imagining of the client Caliborn used, without personalised stickers & sketches"
+        },
+        {
+            "name": "CHEERUBIUM",
+            "author": "mal",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/CHEERUBIUM.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1688325522,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "An imagining of the client Calliope used, with personalised stickers & sketches"
+        },
+        {
+            "name": "CHEERUBIUM REDUX",
+            "author": "mal",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/CHEERUBIUM REDUX.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1688325572,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "An imagining of the client Calliope, without personalised stickers & sketches"
         }
     ]
 }
