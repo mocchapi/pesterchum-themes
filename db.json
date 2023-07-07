@@ -186,7 +186,7 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/strifekindRED.zip",
             "inherits": "pesterchum2.5",
             "version": 0,
-            "updated": 1460827217,
+            "updated": 1453417200,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Strifekind, but red"
         },
@@ -197,7 +197,7 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/UTChum.zip",
             "inherits": "pesterchum",
             "version": 0,
-            "updated": 1460827245,
+            "updated": 1444168800,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Undertale theme"
         },
@@ -211,6 +211,17 @@
             "updated": 1451343600,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Strifekind, but blue"
+        },
+        {
+            "name": "GalaxyChum",
+            "author": "Demadunk",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/GalaxyChum.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1445464800,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Galaxy/space theme"
         }
     ]
 }
