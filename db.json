@@ -200,6 +200,17 @@
             "updated": 1460827245,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Undertale theme"
+        },
+        {
+            "name": "strifekindBLU",
+            "author": "Demadunk",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/strifekindBLU.zip",
+            "inherits": "pesterchum2.5",
+            "version": 0,
+            "updated": 1451343600,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Strifekind, but blue"
         }
     ]
 }
