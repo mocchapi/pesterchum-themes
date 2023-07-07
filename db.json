@@ -167,6 +167,17 @@
             "updated": 1460827245,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Very blue. Vriska theme"
+        },
+        {
+            "name": "araneachum",
+            "author": "Demadunk",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/araneachum.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1465326330,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Similar to vriskachum, but lighter. Aranea theme"
         }
     ]
 }
