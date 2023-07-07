@@ -178,6 +178,17 @@
             "updated": 1465326330,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Similar to vriskachum, but lighter. Aranea theme"
+        },
+        {
+            "name": "strifekindRED",
+            "author": "Demadunk",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/strifekindRED.zip",
+            "inherits": "pesterchum2.5",
+            "version": 0,
+            "updated": 1460827217,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Strifekind, but red"
         }
     ]
 }
