@@ -152,6 +152,9 @@ def parse(args_in):
     ingest_parser.add_argument(
         "--description", type=str, default=None, help="Override description"
     )
+    ingest_parser.add_argument(
+        "--updated", type=int, default=None, help="Override last updated timestamp"
+    )
 
     # add_parser = sub_parsers.add_parser("add") # Manually add item
     # add_parser
@@ -214,6 +217,9 @@ def main(args):
                 else:
                     args.author = query("Author name", "unknown", args.noinput)
 
+            if args.updated == None:
+                args.updated = round(time.time())
+
             if args.inherits == None:
                 # TODO: extract this from style.json
                 if has_entry:
@@ -250,6 +256,7 @@ def main(args):
                 source=args.source,
                 description=args.description,
                 inherits=args.inherits,
+                updated=args.updated,
             )
 
             if has_entry:

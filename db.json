@@ -156,6 +156,17 @@
             "updated": 1688325572,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Calliope, without personalised stickers & sketches"
+        },
+        {
+            "name": "vriskachum",
+            "author": "Demadunk",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/vriskachum.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1460827245,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Very blue. Vriska theme"
         }
     ]
 }
