@@ -222,6 +222,17 @@
             "updated": 1445464800,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Galaxy/space theme"
+        },
+        {
+            "name": "trollchum",
+            "author": "catawump",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollchum.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1345404780,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "A mix between trollian and pesterchum"
         }
     ]
 }
