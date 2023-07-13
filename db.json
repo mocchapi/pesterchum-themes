@@ -64,8 +64,8 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pesterchum2.5dark.zip",
             "inherits": "pesterchum",
-            "version": 0,
-            "updated": 1685968188,
+            "version": 1,
+            "updated": 1689282030,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Pesterchum 2.5, but with dark chat backgrounds"
         },
