@@ -3,29 +3,20 @@
 
     "convo": {
         "style": "background-color: #fdb302;border:2px solid yellow; font-family: 'Courier';",
-        "tabstyle": "background-color: #fdb302; font-family: 'Courier'",
 
 
         "textarea": {
-            "style": "background: #2d2b27; color: white; outline: white 2px; font-size: 14px;font:bold; border:2px solid #c48a00;text-align:center; margin-right:10px; margin-left:10px;"
+            "style": "background: #2d2b27; color: white; font-size: 14px;font:bold; border:2px solid #c48a00;text-align:center; margin-right:10px; margin-left:10px;"
         },
         "input": {
             "style": "background: #2d2b27; color: white; border:2px solid #c48a00;margin-top:5px; margin-right:10px; margin-left:10px; font-size: 12px;font-family: 'Courier'"
         },
-
-        "chumlabel": {
-            "style": "margin-bottom: 21px;background: rgb(196, 138, 0); color: white; border:0px; font-size: 14px;",
-            "align": {
-                "h": "center",
-                "v": "center"
-            },
-            "minheight": 47,
-            "maxheight": 65
-        }
     },
+
+
     "memos": {
         "textarea": {
-            "style": "background: #2d2b27; color: white; outline: white 2px; font-size: 14px;font:bold; border:2px solid #c48a00;text-align:center; margin-right:10px; margin-left:10px;"
+            "style": "background: #2d2b27; color: white; font-size: 14px;font:bold; border:2px solid #c48a00;text-align:center; margin-right:10px; margin-left:10px;"
         },
 
         "time": {
