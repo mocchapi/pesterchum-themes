@@ -10,7 +10,7 @@
         },
         "input": {
             "style": "background: #2d2b27; color: white; border:2px solid #c48a00;margin-top:5px; margin-right:10px; margin-left:10px; font-size: 12px;font-family: 'Courier'"
-        },
+        }
     },
 
 
