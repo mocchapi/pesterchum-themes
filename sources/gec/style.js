@@ -167,7 +167,7 @@
              "size": [0, 0],
              "text": ""
            },
-  "defaultmood": 0,
+  "defaultmood": 3,
   "moodlabel": { "style": "",
                                  "loc": [20, 430],
                                  "text": "MOODS"

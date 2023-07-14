@@ -75,8 +75,8 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec.zip",
             "inherits": "",
-            "version": 0,
-            "updated": 1685988075,
+            "version": 1,
+            "updated": 1689364562,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "100 gecs theme"
         },
@@ -86,8 +86,8 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec xl.zip",
             "inherits": "gec",
-            "version": 0,
-            "updated": 1685988199,
+            "version": 1,
+            "updated": 1689364571,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "100 gecs theme, but bigger"
         },
