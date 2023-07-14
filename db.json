@@ -233,6 +233,17 @@
             "updated": 1345404780,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "A mix between trollian and pesterchum"
+        },
+        {
+            "name": "HatsOff",
+            "author": "Tristanlagreato",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/HatsOff.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1689364491,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Hats & squares!"
         }
     ]
 }
