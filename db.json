@@ -241,9 +241,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/HatsOff.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1689364491,
+            "updated": 1649551330,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Hats & squares!"
+            "description": "Hats & squares!",
+            "md5": "6e1430f55834203b58e5369896a572f4"
         }
     ]
 }
