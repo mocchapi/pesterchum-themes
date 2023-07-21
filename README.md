@@ -22,7 +22,7 @@ The `db.json` should not be edited manually.
 python3 alter.py ingest <path_to_theme_folder_or_zip> 
 ```
 The `ingest` command can be used to easily add or update a theme. It will make informed guesses at the required fields, such as version number & compatible client, and query the user for ones it cannot guess (defaults can be assumed if you provide `--noinput`).  
-All fields can be overridden if needed, by providing the field name as an optional argument (IE `--version 10`).
+All fields (except `md5`) can be overridden if needed, by providing the field name as an optional argument (IE `--version 10`).
 
 ## Contributing
 Made a theme/update? Wanna put it in the repo? awesome!  
@@ -37,9 +37,11 @@ Can't figure it out? You may also [open an issue](https://github.com/mocchapi/pe
 
 
 ## In this repository
-- **sources**: source files of themes
-- **themes**: downloadable theme files of themes. `.tres` for pesterchum godot, `.zip` for QT pesterchum
+- **sources/**: source files of themes
+- **format_version_history/**: archive of previous versions of the format, for validating a database against 
+- **themes/**: downloadable theme files of themes. `.tres` for pesterchum godot, `.zip` for QT pesterchum
 - **db.json**: the most current database version
 - **format.json**: the annotated structure of db.json entries
-- **alter.py**: the database update tool
+- **alter.py**: the database update tool, used for modifying the database as well as retreiving info & statistics
+- **utils.py**: small functions required by `alter.py`
 - **README.md**: this file :D
