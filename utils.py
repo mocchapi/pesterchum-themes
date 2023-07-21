@@ -27,11 +27,20 @@ def md5_update_from_dir(directory, hash):
     return hash
 
 
+
 def md5_dir(directory):
     return md5_update_from_dir(directory, hashlib.md5()).hexdigest()
 # // https://stackoverflow.com/a/54477583
 
 # \\ me
+def md5(path):
+    if os.path.isfile(path):
+        return md5_file(path)
+    elif os.path.isdir(path):
+        return md5_dir(path)
+    else:
+        raise FileNotFoundError()
+
 def simple_fuzzy_match(search_string, target, match_empty=False):
     # Parses:
     # "*ending"

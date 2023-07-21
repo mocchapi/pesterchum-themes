@@ -4,6 +4,7 @@
 # Can be used to update existing records, & add new ones, from a file or folder
 
 import os
+import re
 import time
 import json
 import shutil
@@ -12,6 +13,8 @@ import argparse
 from pathlib import Path
 
 import utils
+
+_re_comments = re.compile(r'(?:[^\".*\:.*\".*\"]|^)\/\/.*\n')
 
 def write_db(path, db):
     if os.path.exists(path) and os.path.isdir(path):
@@ -110,7 +113,9 @@ def parse(args_in):
     ingest_parser = sub_parsers.add_parser(
         "ingest", help="Update or add an entry from a file or folder"
     )  # Add / update item from a file or folder
+
     ingest_parser.add_argument("target", type=Path, help="File or folder to ingest")
+    ingest_parser.add_argument('--no-version-increase','-nvi', action='store_true', default=False, help="Skips increasing version number. Make sure you know what you're doing")
     ingest_parser.add_argument(
         "--author", type=str, default=None, help="Override author value"
     )
@@ -156,16 +161,58 @@ def parse(args_in):
 
     search_parser.add_argument("search", nargs='?', type=str, default=None, help="Search term")
     
-    add_parser = sub_parsers.add_parser("edit") # Manually edit theme
-    add_parser.add_argument("theme",type=str, help="Name of theme in the database")
+    # add_parser = sub_parsers.add_parser("edit") # Manually edit theme
+    # add_parser.add_argument("theme",type=str, help="Name of theme in the database")
 
-    delete_parser = sub_parsers.add_parser("delete") # Delete item
-    delete_parser
+    # delete_parser = sub_parsers.add_parser("delete") # Delete item
+    # delete_parser
 
+    validate_parser = sub_parsers.add_parser("validate", help="Validate databse & its entries to be compliant with the format")
+    validate_parser.add_argument("formatfile", default=Path("./format.json"), type=Path, nargs='?')
 
     return parser.parse_args(args_in)
 
+def handle_validate(db, args):
+    print("Validating database",args.database,'with format file',args.formatfile)
+    with open(args.formatfile, 'r') as f:
+        text = f.read()
+    text = _re_comments.sub('\n', text)
+    fdict = json.loads(text)
+    # format dict
+    def recurse(db_item, format_item, path=""):
+        errors = 0
+        for key in set(list(format_item.keys())+list(db_item.keys())):
+            c_path = path+'/'+key
+            in_dbitem = key in db_item
+            in_fitem = key in format_item
+            friendly_name = f'{c_path} ' + (db_item["name"] if 'name' in db_item else '')
+            friendly_name = f'{friendly_name:<45}'
+            t_dbitem = type(db_item.get(key))
+            t_fitem = type(format_item.get(key))
+            if in_dbitem and not in_fitem:
+                print(friendly_name,f"Has illegal key   {key:^10} of type {t_dbitem}")
+                errors += 1
+            elif in_fitem and not in_dbitem:
+                print(friendly_name,f"Is missing required key {key:^10} of type {t_fitem}")
+                errors += 1
+            else:
+                if t_dbitem != t_fitem:
+                    errors += 1
+                    print(friendly_name+':','type mismatch. format expects',t_dbitem,'but db has',t_fitem)
+                    print(" "*len(friendly_name),"Values:",db_item[key],'vs',format_item[key])
 
+            if t_dbitem == list:
+                for index,arrayitem in enumerate(db_item[key]):
+                    # TODO does not account for nested arrays
+                    errors += recurse(arrayitem, format_item[key][0], c_path+'/['+str(index)+']')
+            elif t_dbitem == dict:
+                errors += recurse(db_item[key], format_item[key], c_path)
+        return errors
+    errors = recurse(db, fdict)
+    if errors > 0:
+        print(f"Database {args.database} had {errors} faults according to format file {args.formatfile}")
+    else:
+        print("Passed with no faults")
 
 def handle_search(db, args):
     search_results = []
@@ -242,7 +289,7 @@ def handle_ingest(db, args):
 
     client_pesterchum_style = {}
     if args.client == 'pesterchum':
-        with open(os.path.join(args.target, 'style.js')) as f:
+        with open(os.path.join(args.target, 'style.js'), 'r') as f:
             client_pesterchum_style = json.load(f)
 
     if args.name == None:
@@ -253,6 +300,8 @@ def handle_ingest(db, args):
 
     idx = find_entry(db, args.name)
     has_entry = idx >= 0
+    md5hash = utils.md5(args.target)
+    has_changed = (has_entry and db['entries'][idx].get('md5','') != md5hash) or (not has_entry)
 
     if has_entry:
         print(f' Entry "{args.name}" exists (#{idx})')
@@ -261,8 +310,18 @@ def handle_ingest(db, args):
 
     if args.version == None:
         if has_entry:
-            args.version = db["entries"][idx]["version"] + 1
-            print("  Version increased to", args.version)
+            if has_changed:
+                do_it = True
+                if args.no_version_increase:
+                    do_it = not utils.yesno("Skip increasing version? This can have dire consequences.",default=True, noinput=args.noinput)
+                if do_it:
+                    args.version = db["entries"][idx]["version"] + 1
+                    print("  Version increased to", args.version)
+                else:
+                    args.version = db['entries'][idx]['version']
+            else:
+                args.version = db['entries'][idx]['version']
+                print("  Version kept at",args.version,'because the files have not changed')
         else:
             args.version = 0
     else:
@@ -302,9 +361,9 @@ def handle_ingest(db, args):
     if args.inherits == None:
         # TODO: extract this from style.json
         if args.client == "pesterchum":
-            args.inherits = client_pesterchum_style.get('main',{}).get('inherits','')
+            args.inherits = client_pesterchum_style.get('inherits','')
         elif has_entry:
-            args.inherits = db["entries"][idx]["inherits"]
+            args.inherits = utils.query("Has the `inherits` value of this theme changed? If not, press enter.", db['entries'][idx]['inherits'], args.noinput)
         else:
             args.inherits = utils.query("Does this theme use `inherits`? if yes enter the name of the theme now. if not, press enter.", "", args.noinput)
     else:
@@ -331,7 +390,7 @@ def handle_ingest(db, args):
         description=args.description,
         inherits=args.inherits,
         updated=args.updated,
-        md5 = utils.md5_dir(args.target),
+        md5 = md5hash,
     )
 
 
@@ -393,6 +452,8 @@ def main(args):
             handle_ingest(db, args)
         case "search":
             handle_search(db, args)
+        case "validate":
+            handle_validate(db, args)
         case _:
             print("Uknown command", args.command)
 
