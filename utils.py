@@ -41,6 +41,52 @@ def md5(path):
     else:
         raise FileNotFoundError()
 
+def treeprint(item, root_name="", wideness=2, indent="", non_node_formatter=None, node_formatter=None, node_char="━", node_split_char="┳", vertical_split_char="┣", vertical_char="┃", corner_char="┗", corner_horizontal_char="━", horizontal_char='━', whitespace_char=" "):
+    def recurse(item, mykey="", wideness=0):
+        if type(item) == dict or type(item) == list:
+            is_list = type(item) == list
+            lines = [[True,str(node_char if len(item) == 0 else node_split_char) +''+ node_formatter(mykey, item)]]
+            collection = []
+            connections = 0
+            for index,key in enumerate(item):
+                if is_list:
+                    key = index
+                coll = recurse(item[key], key, wideness=wideness)
+                if coll[0][0]:
+                    connections += 1
+                collection += coll
+            for idx,subitem in enumerate(collection):
+                connected = subitem[0]
+                stringe = subitem[1]
+                if connected and connections > 0:
+                    if connections == 1:
+                        linetext = corner_char + corner_horizontal_char + corner_horizontal_char*wideness + stringe 
+                    else:
+                        linetext = vertical_split_char + horizontal_char + horizontal_char*wideness + stringe 
+                    connections -= 1
+                if not connected and connections > 0:
+                    linetext = vertical_char + whitespace_char + whitespace_char*wideness + stringe
+                elif not connected:
+                    linetext = whitespace_char + whitespace_char + whitespace_char*wideness + stringe
+
+                lines.append([
+                    False,
+                    linetext
+                ])
+        else:
+            stringe = non_node_formatter(mykey, item)
+            return [[True, stringe]]
+        return lines
+    if non_node_formatter == None:
+        non_node_formatter = lambda key,value: str(key)+': '+str(value)
+    if node_formatter == None:
+        node_formatter = lambda key,value: str(key)
+    result = recurse(item, mykey=root_name, wideness=wideness)
+    return '\n'.join([indent+x[1] for x in result])
+
+def timestamp_to_year(timestamp):
+    return DT.fromtimestamp(timestamp).year
+
 def simple_fuzzy_match(search_string, target, match_empty=False):
     # Parses:
     # "*ending"

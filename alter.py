@@ -167,8 +167,12 @@ def parse(args_in):
     # delete_parser = sub_parsers.add_parser("delete") # Delete item
     # delete_parser
     
-    # stats_parser = sub_parsers.add_parser("stats") # Fun statistics
-    # stats_parser
+    stats_parser = sub_parsers.add_parser("stats") # Fun statistics
+    stats_parser.add_argument('views', choices=[
+        'dependencies',
+        'history',
+        'authors',
+    ])
     # oldest theme, newest theme, average publish date, author theme count ranking, tree of dependencies, most updates, largest & smallest file size
 
     validate_parser = sub_parsers.add_parser("validate", help="Validate databse & its entries to be compliant with the format")
@@ -448,6 +452,53 @@ def handle_ingest(db, args):
     print()
     print("You can now make a commit <3")
 
+def handle_stats(db, args):
+    awards = ['🥇', '🥈', '🥉', '🎖']
+    match args.views:
+        case 'authors':
+            authors = {}
+            for entry in db['entries']:
+                if not entry['author'] in authors:
+                    authors[entry['author']] = []
+                authors[entry['author']].append(entry)
+            sorted_authors = {f'{author}{awards[idx] if idx <=2 else ""}':[x['name'] for x in authors[author]] for idx, author in enumerate(sorted(authors.keys(), key=lambda x: -len(authors[x])))}
+            print(utils.treeprint(sorted_authors, root_name="Authors sorted by amount of published themes", non_node_formatter=lambda key,value: str(value), node_formatter=lambda key,value: '►'+str(key)))
+        case 'history':
+            sorted_entries = sorted(db['entries'],key=lambda x: x['updated'])
+            year_dict = {}
+            for i in range(
+                    utils.timestamp_to_year(sorted_entries[0]['updated']),
+                    utils.timestamp_to_year(sorted_entries[-1]['updated'])+1
+                    ):
+                # My worst line of python ever
+                year_dict[i] = [f"{x['name']+(awards[0] if (x == sorted_entries[0] or x == sorted_entries[-1]) else (awards[idx] if idx <= 3 else (awards[len(sorted_entries)-idx-1] if (len(sorted_entries)-idx-1) <=3 else ''))):<25} {utils.timestamp_to_human(x['updated'])}" for idx,x in enumerate(sorted_entries) if utils.timestamp_to_year(x['updated']) == i]
+            
+            print(utils.treeprint(year_dict, root_name="Timeline of pesterchum themes", non_node_formatter=lambda key,val: '►'+str(val)))
+        case 'dependencies':
+            root = {}
+            visited = {}
+            flattened = {x['name']:x for x in db['entries'] if x['client'] == 'pesterchum'}
+            hits = {key:0 for key in flattened.keys()}
+
+            def recurse(name):
+                if not name in visited:
+                    visited[name] = {}
+                if not name in hits:
+                    hits[name] = 0
+                in_database = name in flattened
+                if not in_database or flattened[name]['inherits'] in ['', 'pesterchum']:
+                    if not name in root:
+                        root[name] = visited[name]
+                else:
+                    recurse(flattened[name]['inherits'])[name] = visited[name]
+                    hits[flattened[name]['inherits']] +=1
+                return visited[name]
+
+            for item in flattened.keys():
+                if not item in visited:
+                    recurse(item)
+            sorted_root = {f'{x}{awards[idx] if idx <= 3 and hits[x] > 0 else ""}':visited[x] for idx,x in enumerate(sorted(visited.keys(), key=lambda x: -hits[x]))}
+            print(utils.treeprint(sorted_root, root_name="pesterchum", indent="  ", node_formatter=lambda key,val: str(key)))
 
 def main(args):
     db = load_db(args.database)
@@ -459,6 +510,8 @@ def main(args):
             handle_search(db, args)
         case "validate":
             handle_validate(db, args)
+        case "stats":
+            handle_stats(db, args)
         case _:
             print("Uknown command", args.command)
 
