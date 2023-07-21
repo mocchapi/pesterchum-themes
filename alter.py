@@ -166,6 +166,10 @@ def parse(args_in):
 
     # delete_parser = sub_parsers.add_parser("delete") # Delete item
     # delete_parser
+    
+    # stats_parser = sub_parsers.add_parser("stats") # Fun statistics
+    # stats_parser
+    # oldest theme, newest theme, average publish date, author theme count ranking, tree of dependencies, most updates, largest & smallest file size
 
     validate_parser = sub_parsers.add_parser("validate", help="Validate databse & its entries to be compliant with the format")
     validate_parser.add_argument("formatfile", default=Path("./format.json"), type=Path, nargs='?')
@@ -313,12 +317,13 @@ def handle_ingest(db, args):
             if has_changed:
                 do_it = True
                 if args.no_version_increase:
-                    do_it = not utils.yesno("Skip increasing version? This can have dire consequences.",default=True, noinput=args.noinput)
+                    do_it = not utils.yesno("Skip increasing version? File changes have been detected, this can have dire consequences.",default=True, noinput=args.noinput)
                 if do_it:
                     args.version = db["entries"][idx]["version"] + 1
                     print("  Version increased to", args.version)
                 else:
                     args.version = db['entries'][idx]['version']
+                    print("  Version kept at",args.version,'at your request')
             else:
                 args.version = db['entries'][idx]['version']
                 print("  Version kept at",args.version,'because the files have not changed')

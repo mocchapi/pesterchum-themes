@@ -1,6 +1,7 @@
 {
     "meta": {
-        "format_version": 1
+        "format_version": 2,
+        "name": "Pesterchum theme repository"
     },
     "entries": [
         {
@@ -8,11 +9,12 @@
             "author": "(lis)anne",
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian2.5dark.zip",
-            "inherits": "pesterchum2.5",
-            "version": 1,
-            "updated": 1689283065,
+            "inherits": "trollian2.5",
+            "version": 2,
+            "updated": 1689282706,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Trollian 2.5 but with a dark chat background"
+            "description": "Trollian 2.5 but with a dark chat background",
+            "md5": "390b9b75bcb08d68ccb99fef2b8ddbfe"
         },
         {
             "name": "pchum95Plus!",
@@ -21,9 +23,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pchum95Plus!.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1683496380,
+            "updated": 1683470882,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Windows 95 Plus! inspired theme"
+            "description": "Windows 95 Plus! inspired theme",
+            "md5": "05ebf9267e1166ee479b12c8dbb4bf3e"
         },
         {
             "name": "trollian95",
@@ -32,9 +35,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian95.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1683496380,
+            "updated": 1683478448,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Windows 95 inspired trollian theme"
+            "description": "Windows 95 inspired trollian theme",
+            "md5": "b8b5c6e1f023a067ba11b1d877d2ddc4"
         },
         {
             "name": "trollian95Plus!",
@@ -43,9 +47,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollian95Plus!.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1683496380,
+            "updated": 1683097026,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Windows 95 Plus! inspired trollian theme"
+            "description": "Windows 95 Plus! inspired trollian theme",
+            "md5": "4e929c8b8b7e3d87292b3d48a41672ce"
         },
         {
             "name": "pibby",
@@ -54,20 +59,22 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pibby.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1679515620,
+            "updated": 1679420446,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "el gato. Requires this font: https://www.dafont.com/austie-bost-kitten-klub.font"
+            "description": "el gato. Requires this font: https://www.dafont.com/austie-bost-kitten-klub.font",
+            "md5": "21651970c25840b9803b48e4af745849"
         },
         {
             "name": "pesterchum2.5dark",
             "author": "(lis)anne",
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/pesterchum2.5dark.zip",
-            "inherits": "pesterchum",
-            "version": 3,
-            "updated": 1689367123,
+            "inherits": "pesterchum2.5",
+            "version": 4,
+            "updated": 1689366830,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Pesterchum 2.5, but with dark chat backgrounds"
+            "description": "Pesterchum 2.5, but with dark chat backgrounds",
+            "md5": "70c0d0ad8d7e45a7ea838cf35b25734e"
         },
         {
             "name": "gec",
@@ -76,9 +83,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec.zip",
             "inherits": "",
             "version": 1,
-            "updated": 1689364562,
+            "updated": 1682422088,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "100 gecs theme"
+            "description": "100 gecs theme",
+            "md5": "3186a52c73a8abdd072a59408b4816f5"
         },
         {
             "name": "gec xl",
@@ -87,9 +95,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec xl.zip",
             "inherits": "gec",
             "version": 1,
-            "updated": 1689364571,
+            "updated": 1679352702,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "100 gecs theme, but bigger"
+            "description": "100 gecs theme, but bigger",
+            "md5": "1d009a243eb3859f88beee6a8701c006"
         },
         {
             "name": "TruestTrollian",
@@ -98,9 +107,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/TruestTrollian.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1686431287,
+            "updated": 1686430232,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Trollian in alternian. requires this font: https://trolltype.mspa.sudrien.net/alternian.ttf"
+            "description": "Trollian in alternian. requires this font: https://trolltype.mspa.sudrien.net/alternian.ttf",
+            "md5": "678a8eecafa22f74666380e232538977"
         },
         {
             "name": "Skaianet Systems Terminal",
@@ -109,9 +119,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/Skaianet Systems Terminal.zip",
             "inherits": "",
             "version": 2,
-            "updated": 1687371667,
+            "updated": 1687371053,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Terminal theme. Requires the included dejavu mono font to be installed"
+            "description": "Terminal theme. Requires the included dejavu mono font to be installed",
+            "md5": "dc7f8589be207db231d7120a76a90fb6"
         },
         {
             "name": "JEERUBIUM",
@@ -120,9 +131,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM.zip",
             "inherits": "",
             "version": 1,
-            "updated": 1688340894,
+            "updated": 1688340465,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "An imagining of the client Caliborn used, with personalised stickers & sketches"
+            "description": "An imagining of the client Caliborn used, with personalised stickers & sketches",
+            "md5": "7601b0d60d893b6df37b8215dd6f1c7a"
         },
         {
             "name": "JEERUBIUM REDUX",
@@ -131,9 +143,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM REDUX.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1688325429,
+            "updated": 1688318765,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "An imagining of the client Caliborn used, without personalised stickers & sketches"
+            "description": "An imagining of the client Caliborn used, without personalised stickers & sketches",
+            "md5": "725ceeb21aea3aa4109d0e9864fe015d"
         },
         {
             "name": "CHEERUBIUM",
@@ -142,9 +155,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/CHEERUBIUM.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1688325522,
+            "updated": 1688319773,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "An imagining of the client Calliope used, with personalised stickers & sketches"
+            "description": "An imagining of the client Calliope used, with personalised stickers & sketches",
+            "md5": "7d3c36dba018b94890f56a166db49189"
         },
         {
             "name": "CHEERUBIUM REDUX",
@@ -153,9 +167,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/CHEERUBIUM REDUX.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1688325572,
+            "updated": 1688318462,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "An imagining of the client Calliope, without personalised stickers & sketches"
+            "description": "An imagining of the client Calliope, without personalised stickers & sketches",
+            "md5": "54558a4104a68d04da98497c3a0dbaae"
         },
         {
             "name": "vriskachum",
@@ -164,9 +179,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/vriskachum.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1460827245,
+            "updated": 1459786678,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Very blue. Vriska theme"
+            "description": "Very blue. Vriska theme",
+            "md5": "7d5c819d160163c78b621fa9fa27b9d3"
         },
         {
             "name": "araneachum",
@@ -175,9 +191,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/araneachum.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1465326330,
+            "updated": 1465325456,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Similar to vriskachum, but lighter. Aranea theme"
+            "description": "Similar to vriskachum, but lighter. Aranea theme",
+            "md5": "8159cf82b2816f68b41dd1cf6ecdc683"
         },
         {
             "name": "strifekindRED",
@@ -186,9 +203,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/strifekindRED.zip",
             "inherits": "pesterchum2.5",
             "version": 0,
-            "updated": 1453417200,
+            "updated": 1453478134,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Strifekind, but red"
+            "description": "Strifekind, but red",
+            "md5": "e039066b3e11ad148ec7627a3057cf18"
         },
         {
             "name": "UTChum",
@@ -197,9 +215,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/UTChum.zip",
             "inherits": "pesterchum",
             "version": 0,
-            "updated": 1444168800,
+            "updated": 1455029682,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Undertale theme"
+            "description": "Undertale theme",
+            "md5": "fd47bb0fdf1d6f2fdc6fa93bf2edb96e"
         },
         {
             "name": "strifekindBLU",
@@ -208,9 +227,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/strifekindBLU.zip",
             "inherits": "pesterchum2.5",
             "version": 0,
-            "updated": 1451343600,
+            "updated": 1451422446,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Strifekind, but blue"
+            "description": "Strifekind, but blue",
+            "md5": "f5ebde9c37585f49aad56094f62fc039"
         },
         {
             "name": "GalaxyChum",
@@ -219,9 +239,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/GalaxyChum.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1445464800,
+            "updated": 1445580544,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "Galaxy/space theme"
+            "description": "Galaxy/space theme",
+            "md5": "ee2ee3da5ba9a61d1476afb185f83e5b"
         },
         {
             "name": "trollchum",
@@ -230,9 +251,10 @@
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/trollchum.zip",
             "inherits": "",
             "version": 0,
-            "updated": 1345404780,
+            "updated": 1345405776,
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "description": "A mix between trollian and pesterchum"
+            "description": "A mix between trollian and pesterchum",
+            "md5": "ebffb388cc90aaf0a971097796ec8a4b"
         },
         {
             "name": "HatsOff",
