@@ -32,7 +32,7 @@
 			"menuitem": "margin-right: 14px; ",
 			"loc": [
 				330,
-				70
+				69
 			]
 		},
 		"sounds": {
@@ -219,36 +219,36 @@
 		},
 		"mychumhandle": {
 			"currentMood": [
-				700,
-				0
+				622,
+				88
 			],
 			"label": {
 				"text": "",
 				"loc": [
-					0,
-					0
+					776,
+					258
 				],
 				"style": "color: #ff000000; "
 			},
 			"handle": {
 				"style": "background: rgba(0,0,0,0); color: #ff000000; ",
 				"loc": [
-					0,
-					0
+					924,
+					269
 				],
 				"size": [
-					0,
-					0
+					59,
+					66
 				]
 			},
 			"colorswatch": {
 				"loc": [
-					0,
-					0
+					1090,
+					162
 				],
 				"size": [
-					0,
-					0
+					42,
+					47
 				],
 				"text": ""
 			}
@@ -259,24 +259,24 @@
 		"addchum": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				475,
-				67
+				590,
+				7
 			],
 			"size": [
-				0,
-				0
+				50,
+				50
 			],
 			"text": ""
 		},
 		"pester": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				0,
-				0
+				431,
+				141
 			],
 			"size": [
-				0,
-				0
+				206,
+				271
 			],
 			"text": ""
 		},
@@ -292,7 +292,7 @@
 			],
 			"text": ""
 		},
-		"defaultmood": 18,
+		"defaultmood": 1,
 		"moodlabel": {
 			"style": "",
 			"loc": [
@@ -310,23 +310,23 @@
 					141
 				],
 				"size": [
-					217,
-					270
+					221,
+					271
 				],
 				"text": "",
 				"icon": "$path/",
-				"mood": 18
+				"mood": 1
 			},
 			{
 				"style": "border: 0px; color: #ff000000; ",
 				"selected": "border: 0px; color: #ff000000; ",
 				"loc": [
-					12,
-					117
+					205,
+					119
 				],
 				"size": [
-					435,
-					18
+					433,
+					16
 				],
 				"text": "",
 				"icon": "$path/",
@@ -358,7 +358,7 @@
 			},
 			"minheight": 22,
 			"maxheight": 36,
-			"text": "cheering: $handle!"
+			"text": "JEERING: $handle."
 		},
 		"textarea": {
 			"style": "background: rgb(200, 200, 200); border: 2px solid #c2c2c2; font-size: 14px; "
@@ -376,8 +376,8 @@
 			"tabstyle": 0
 		},
 		"text": {
-			"beganpester": "began cheering",
-			"ceasepester": "gave up cheering",
+			"beganpester": "STARTED JEERING",
+			"ceasepester": "GAVE uP JEERING",
 			"blocked": "blocked",
 			"unblocked": "forgave",
 			"openmemo": "opened memo on board",

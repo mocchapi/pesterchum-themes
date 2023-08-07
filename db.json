@@ -130,11 +130,11 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM.zip",
             "inherits": "",
-            "version": 1,
-            "updated": 1688340465,
+            "version": 2,
+            "updated": 1691446939,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Caliborn used, with personalised stickers & sketches",
-            "md5": "7601b0d60d893b6df37b8215dd6f1c7a"
+            "md5": "fad105279a72b691f5ce645028e83c33"
         },
         {
             "name": "JEERUBIUM REDUX",
@@ -142,11 +142,11 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/JEERUBIUM REDUX.zip",
             "inherits": "",
-            "version": 0,
-            "updated": 1688318765,
+            "version": 1,
+            "updated": 1691446541,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Caliborn used, without personalised stickers & sketches",
-            "md5": "725ceeb21aea3aa4109d0e9864fe015d"
+            "md5": "c83a4ea64a33d7ca778d76269fdb5e8c"
         },
         {
             "name": "CHEERUBIUM",
@@ -154,11 +154,11 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/CHEERUBIUM.zip",
             "inherits": "",
-            "version": 0,
-            "updated": 1688319773,
+            "version": 1,
+            "updated": 1691446483,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Calliope used, with personalised stickers & sketches",
-            "md5": "7d3c36dba018b94890f56a166db49189"
+            "md5": "beb7584827c9f38afbcaead00362c9ae"
         },
         {
             "name": "CHEERUBIUM REDUX",
@@ -166,11 +166,11 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/CHEERUBIUM REDUX.zip",
             "inherits": "",
-            "version": 0,
-            "updated": 1688318462,
+            "version": 1,
+            "updated": 1691446521,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Calliope, without personalised stickers & sketches",
-            "md5": "54558a4104a68d04da98497c3a0dbaae"
+            "md5": "1743337c1ff94105788548728652765d"
         },
         {
             "name": "vriskachum",

@@ -32,7 +32,7 @@
 			"menuitem": "margin-right: 14px; ",
 			"loc": [
 				350,
-				70
+				69
 			]
 		},
 		"sounds": {
@@ -219,36 +219,36 @@
 		},
 		"mychumhandle": {
 			"currentMood": [
-				700,
-				0
+				622,
+				87
 			],
 			"label": {
 				"text": "",
 				"loc": [
-					0,
-					0
+					1073,
+					267
 				],
 				"style": "color: #ff000000; "
 			},
 			"handle": {
 				"style": "background: rgba(0,0,0,0); color: #ff000000; ",
 				"loc": [
-					0,
-					0
+					1055,
+					263
 				],
 				"size": [
-					0,
-					0
+					37,
+					43
 				]
 			},
 			"colorswatch": {
 				"loc": [
-					0,
-					0
+					1064,
+					267
 				],
 				"size": [
-					0,
-					0
+					3,
+					16
 				],
 				"text": ""
 			}
@@ -259,32 +259,32 @@
 		"addchum": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				475,
-				67
+				590,
+				10
 			],
 			"size": [
-				0,
-				0
+				50,
+				49
 			],
 			"text": ""
 		},
 		"pester": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				0,
-				0
+				210,
+				142
 			],
 			"size": [
-				0,
-				0
+				209,
+				270
 			],
 			"text": ""
 		},
 		"block": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				1500,
-				202
+				1037,
+				258
 			],
 			"size": [
 				71,
@@ -292,7 +292,7 @@
 			],
 			"text": ""
 		},
-		"defaultmood": 18,
+		"defaultmood": 0,
 		"moodlabel": {
 			"style": "",
 			"loc": [
@@ -306,27 +306,27 @@
 				"style": "border: 0px; ",
 				"selected": "background-image: url($path/lime.png); border: 0px; ",
 				"loc": [
-					418,
-					141
+					419,
+					143
 				],
 				"size": [
-					217,
+					219,
 					270
 				],
 				"text": "",
 				"icon": "$path/",
-				"mood": 18
+				"mood": 0
 			},
 			{
 				"style": "border: 0px; color: #ff000000; ",
 				"selected": "border: 0px; color: #ff000000; ",
 				"loc": [
-					12,
-					117
+					205,
+					119
 				],
 				"size": [
 					435,
-					18
+					16
 				],
 				"text": "",
 				"icon": "$path/",
@@ -377,13 +377,13 @@
 		},
 		"text": {
 			"beganpester": "began cheering",
-			"ceasepester": "gave up cheering",
+			"ceasepester": "gave Up cheering",
 			"blocked": "blocked",
 			"unblocked": "forgave",
 			"openmemo": "opened memo on board",
 			"joinmemo": "responded to memo",
 			"closememo": "ceased responding to memo",
-			"kickedmemo": "you're not allowed to speak..."
+			"kickedmemo": "yoU're not allowed to speak..."
 		},
 		"systemMsgColor": "#ff646464"
 	},

@@ -219,36 +219,36 @@
 		},
 		"mychumhandle": {
 			"currentMood": [
-				700,
-				0
+				622,
+				86
 			],
 			"label": {
 				"text": "",
 				"loc": [
-					0,
-					0
+					-427,
+					393
 				],
 				"style": "color: #ff000000; "
 			},
 			"handle": {
 				"style": "background: rgba(0,0,0,0); color: #ff000000; ",
 				"loc": [
-					0,
-					0
+					-559,
+					129
 				],
 				"size": [
-					0,
-					0
+					57,
+					55
 				]
 			},
 			"colorswatch": {
 				"loc": [
-					0,
-					0
+					-399,
+					168
 				],
 				"size": [
-					0,
-					0
+					40,
+					46
 				],
 				"text": ""
 			}
@@ -259,24 +259,24 @@
 		"addchum": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				475,
-				67
+				590,
+				5
 			],
 			"size": [
-				0,
-				0
+				50,
+				50
 			],
 			"text": ""
 		},
 		"pester": {
 			"style": "background: rgba(0,0,0,0); border: 0px; color: #ff000000; ",
 			"loc": [
-				0,
-				0
+				430,
+				140
 			],
 			"size": [
-				0,
-				0
+				207,
+				272
 			],
 			"text": ""
 		},
@@ -292,7 +292,7 @@
 			],
 			"text": ""
 		},
-		"defaultmood": 18,
+		"defaultmood": 1,
 		"moodlabel": {
 			"style": "",
 			"loc": [
@@ -306,23 +306,23 @@
 				"style": "border: 0px; ",
 				"selected": "background-image: url($path/cherry.png); border: 0px; ",
 				"loc": [
-					210,
-					141
+					209,
+					140
 				],
 				"size": [
-					217,
-					270
+					221,
+					272
 				],
 				"text": "",
 				"icon": "$path/",
-				"mood": 18
+				"mood": 1
 			},
 			{
 				"style": "border: 0px; color: #ff000000; ",
 				"selected": "border: 0px; color: #ff000000; ",
 				"loc": [
-					12,
-					117
+					205,
+					120
 				],
 				"size": [
 					435,
@@ -358,7 +358,7 @@
 			},
 			"minheight": 22,
 			"maxheight": 36,
-			"text": "cheering: $handle!"
+			"text": "JEERING: $handle."
 		},
 		"textarea": {
 			"style": "background: rgb(200, 200, 200); border: 2px solid #c2c2c2; font-size: 14px; "
@@ -376,8 +376,8 @@
 			"tabstyle": 0
 		},
 		"text": {
-			"beganpester": "began cheering",
-			"ceasepester": "gave up cheering",
+			"beganpester": "STARTED JEERING",
+			"ceasepester": "GAVE uP JEERING",
 			"blocked": "blocked",
 			"unblocked": "forgave",
 			"openmemo": "opened memo on board",
