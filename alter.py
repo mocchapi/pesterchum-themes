@@ -13,6 +13,7 @@ import argparse
 from pathlib import Path
 
 import utils
+import hasher
 
 _re_comments = re.compile(r'(?:[^\".*\:.*\".*\"]|^)\/\/.*\n')
 
@@ -73,7 +74,8 @@ def format_entry(
     source="",
     description="",
     inherits="",
-    md5="",
+    sha256_download="<to be computed after write>",
+    sha256_install="",
 ):
     return {
         "name": name,
@@ -85,7 +87,8 @@ def format_entry(
         "updated": updated,
         "source": source,
         "description": description,
-        "md5": md5,
+        "sha256_download": sha256_download,
+        "sha256_install": sha256_install,
     }
 
 
@@ -96,7 +99,8 @@ def parse(args_in):
     )
     parser.add_argument(
         "--noinput",
-        help="Assume defaults for all queries requiring user input, such as author names.",
+        help="Assume defaults for all queries requiring user input, such as y/n prompts.",
+        action="store_true"
     )
     parser.add_argument(
         "--host",
@@ -144,6 +148,9 @@ def parse(args_in):
     ingest_parser.add_argument(
         "--updated", type=int, default=None, help="Override last updated timestamp"
     )
+    ingest_parser.add_argument(
+        '--integrity-file', type=Path, default=Path('integrity.txt', help="Path where the download integrity file is written to")
+    )
 
     search_parser = sub_parsers.add_parser("search", help="Search & list entries in the database")
     search_parser.add_argument("--client", type=str, default=None, help="Limit to client type")
@@ -177,6 +184,10 @@ def parse(args_in):
 
     validate_parser = sub_parsers.add_parser("validate", help="Validate databse & its entries to be compliant with the format")
     validate_parser.add_argument("formatfile", default=Path("./format.json"), type=Path, nargs='?')
+    validate_parser.add_argument("--fix", default=None, type=bool, action=argparse.BooleanOptionalAction)
+    validate_parser.add_argument(
+        '--integrity-file', type=Path, default=Path('integrity.txt', help="Path where the download integrity file is written to")
+    )
 
     return parser.parse_args(args_in)
 
@@ -186,6 +197,9 @@ def handle_validate(db, args):
         text = f.read()
     text = _re_comments.sub('\n', text)
     fdict = json.loads(text)
+
+    errored_entries = set()
+    errored_else = set()
     # format dict
     def recurse(db_item, format_item, path=""):
         errors = 0
@@ -197,30 +211,77 @@ def handle_validate(db, args):
             friendly_name = f'{friendly_name:<45}'
             t_dbitem = type(db_item.get(key))
             t_fitem = type(format_item.get(key))
+            did_error = True
             if in_dbitem and not in_fitem:
                 print(friendly_name,f"Has illegal key   {key:^10} of type {t_dbitem}")
-                errors += 1
             elif in_fitem and not in_dbitem:
                 print(friendly_name,f"Is missing required key {key:^10} of type {t_fitem}")
-                errors += 1
+            elif t_dbitem != t_fitem:
+                print(friendly_name+':','type mismatch. format expects',t_dbitem,'but db has',t_fitem)
+                print(" "*len(friendly_name),"Values:",db_item[key],'vs',format_item[key])
             else:
-                if t_dbitem != t_fitem:
-                    errors += 1
-                    print(friendly_name+':','type mismatch. format expects',t_dbitem,'but db has',t_fitem)
-                    print(" "*len(friendly_name),"Values:",db_item[key],'vs',format_item[key])
+                did_error = False  
+
+            if did_error:
+                errors += 1
+                if path.startswith('/entries/'):
+                    errored_entries.add(db['entries'].index(db_item))
+                else:
+                    errored_else.add(c_path)
 
             if t_dbitem == list:
                 for index,arrayitem in enumerate(db_item[key]):
                     # TODO does not account for nested arrays
+                    # The database doesnt have those. i hope it never will
                     errors += recurse(arrayitem, format_item[key][0], c_path+'/['+str(index)+']')
             elif t_dbitem == dict:
                 errors += recurse(db_item[key], format_item[key], c_path)
         return errors
     errors = recurse(db, fdict)
-    if errors > 0:
-        print(f"Database {args.database} had {errors} faults according to format file {args.formatfile}")
-    else:
+    if errors == 0:
         print("Passed with no faults")
+        if args.fix:
+            print("No fixes required! exiting now.")
+        return
+    print()
+    print(f"Database {args.database} had {errors} faults according to format file {args.formatfile}")
+    print(f"  in {len(errored_entries)} entries and {len(errored_else)} other keys")
+    print()
+    if len(errored_entries) > 0 and args.fix != False:
+        print("Would you like to re-ingest the following entries?")
+        if len(errored_else) > 0:
+            print("/!\ Note: problems were found in the following non-entry keys: ",errored_else)
+            print("/!\ re-ingesting will not fix all problems and may worsen faults in this case")
+            print("/!\ it is advised to determine all problems before proceeding")
+        print('\n'.join([f'   #{x} '+db['entries'][x]['name'] for x in errored_entries]))
+        if not utils.yesno("Re-ingest (keep versions)", args.fix == True, args.noinput):
+            print("Not fixing. byee")
+            return
+        print()
+        for index in errored_entries:
+            re_ingest(db, index, noinput=args.noinput, integrity_file=args.integrity_file)
+            
+            print()
+        print()
+        print()
+        print("all entries re-ingested. gootbye")
+        return
+
+
+def re_ingest(db, index, noinput=False, integrity_file=None, source_path=None):
+    entry = db['entries'][index]
+    name = entry['name']
+    print(f"Re-ingesting #{index} {name}")
+    if source_path == None:
+        source_path = './sources/'+name
+    if integrity_file == None:
+        integrity_file = 'integrity.txt'
+    text_args = ['ingest',source_path, '--no-version-increase','--updated',str(entry['updated']),'--integrity-file',str(integrity_file)]
+    print('  ','with arguments:',text_args)
+    if noinput:
+        text_args.insert(0, '--noinput')
+    args = parse(text_args)
+    handle_ingest(db, args)
 
 def handle_search(db, args):
     search_results = []
@@ -308,8 +369,8 @@ def handle_ingest(db, args):
 
     idx = find_entry(db, args.name)
     has_entry = idx >= 0
-    md5hash = utils.md5(args.target)
-    has_changed = (has_entry and db['entries'][idx].get('md5','') != md5hash) or (not has_entry)
+    sha256_install = hasher.sha256(args.target)
+    has_changed = (has_entry and db['entries'][idx].get('sha256_install','') != sha256_install) or (not has_entry)
 
     if has_entry:
         print(f' Entry "{args.name}" exists (#{idx})')
@@ -399,7 +460,7 @@ def handle_ingest(db, args):
         description=args.description,
         inherits=args.inherits,
         updated=args.updated,
-        md5 = md5hash,
+        sha256_install = sha256_install,
     )
 
 
@@ -413,7 +474,13 @@ def handle_ingest(db, args):
                 if key == 'updated':
                     before_show += ' (' + utils.timestamp_to_human(db['entries'][idx].get(key, 0)) + ')'
                     after_show += ' (' + utils.timestamp_to_human(data[key]) + ')'
-                print(f"{key:>15}: {before_show:>30} -> {after_show}")
+                print(f"{key:>15}: {before_show:>35} -> {after_show}")
+        for key in db['entries'][idx]:
+            if not key in data:
+                before_show = str(db['entries'][idx][key])
+                after_show = '<deleted>'
+                print(f"{key:>15}: {before_show:>35} -> {after_show}")
+                
         print()
         if not utils.yesno('Update theme?', True, args.noinput):
             print("Changes aborted!")
@@ -432,6 +499,8 @@ def handle_ingest(db, args):
             return
         db["entries"].append(data)
 
+    final_download_path = dst
+
     match args.client:
         case "pesterchum":
             if args.target.suffix == ".zip":
@@ -440,17 +509,35 @@ def handle_ingest(db, args):
                 except shutil.SameFileError as e:
                     print("File already in correct location")
             elif args.target.is_dir:
-                zipto(args.target, dst + ".zip")
+                final_download_path = dst + ".zip"
+                zipto(args.target, final_download_path)
             else:
                 raise Exception(
                     f"Error ingesting {dst}: Pesterchum themes must be a folder or a .zip file"
                 )
 
+    print()
+    print("Computing new download hash...")
+    data['sha256_download'] = hasher.sha256(final_download_path)
+    print(data['sha256_download'])
+    print()
+
+    integrity_list = make_integrity_list(db)
+
     print("Saving to", args.database)
     write_db(args.database, db)
+    print("database saved")
+    print()
+    print("Writing download integrity list to",args.integrity_file)
+    with open(args.integrity_file,'w') as f:
+        f.write(integrity_list)
     print("All done!")
     print()
     print("You can now make a commit <3")
+
+def make_integrity_list(db):
+    return '\n'.join([x.get('sha256_download','') for x in db['entries']])
+
 
 def handle_stats(db, args):
     awards = ['🥇', '🥈', '🥉', '🎖']

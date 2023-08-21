@@ -14,7 +14,8 @@
             "updated": 1689282706,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Trollian 2.5 but with a dark chat background",
-            "md5": "390b9b75bcb08d68ccb99fef2b8ddbfe"
+            "sha256_download": "35cd55229069eac66c10ffe963dccfb64dd1073685f5a13710139821f430f39b",
+            "sha256_install": "4bed376c97a7865ba9711f8e86e15576ac7318aaaf52244928b5e4d5d1f0c21f"
         },
         {
             "name": "pchum95Plus!",
@@ -26,7 +27,8 @@
             "updated": 1683470882,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Windows 95 Plus! inspired theme",
-            "md5": "05ebf9267e1166ee479b12c8dbb4bf3e"
+            "sha256_download": "54f7175fb72462378161509a695d4bcbc69ec90f7e4b3427546c74d1fc0af096",
+            "sha256_install": "ffa84c26903c8d9fbfae6d048a6039853f4aa698e02efc10c15309cce0fcbdd4"
         },
         {
             "name": "trollian95",
@@ -38,7 +40,8 @@
             "updated": 1683478448,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Windows 95 inspired trollian theme",
-            "md5": "b8b5c6e1f023a067ba11b1d877d2ddc4"
+            "sha256_download": "988ff74cdfa7d5818ade0d940f2ef4d937c1dc298e4e88d321042f908cd0ef6a",
+            "sha256_install": "64d8b233c5e8dfc3a38e89a2941d01a80e7a62551b6a4f053ed3336469ca0652"
         },
         {
             "name": "trollian95Plus!",
@@ -50,7 +53,8 @@
             "updated": 1683097026,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Windows 95 Plus! inspired trollian theme",
-            "md5": "4e929c8b8b7e3d87292b3d48a41672ce"
+            "sha256_download": "33458ec98343597f1aa795571e1b1c8c211f4609c36ada44592df2298d3ed7fd",
+            "sha256_install": "06cb700998c704ac003d1b272b4ecc8397d0d389e943b1ff8b61ddedaa6cd4b7"
         },
         {
             "name": "pibby",
@@ -62,7 +66,8 @@
             "updated": 1679420446,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "el gato. Requires this font: https://www.dafont.com/austie-bost-kitten-klub.font",
-            "md5": "21651970c25840b9803b48e4af745849"
+            "sha256_download": "6067a75da25ac0b39fb029d02fad651ef89d1943b08418f56f3db4f62e9c9d71",
+            "sha256_install": "a33b453f1332cce03c2981297f2e4ee833d8b1207518aebd0a8cfb0a5f9f8e2e"
         },
         {
             "name": "pesterchum2.5dark",
@@ -74,7 +79,8 @@
             "updated": 1689366830,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Pesterchum 2.5, but with dark chat backgrounds",
-            "md5": "70c0d0ad8d7e45a7ea838cf35b25734e"
+            "sha256_download": "9e5595b64b3d4caaa338aac5442dd00d09762711c12f70dcda4f007475d186b0",
+            "sha256_install": "8f7919fad4795e75b13987e669997f1ed48415182938ccb9bcfc7d6c1ed6eb42"
         },
         {
             "name": "gec",
@@ -86,7 +92,8 @@
             "updated": 1682422088,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "100 gecs theme",
-            "md5": "3186a52c73a8abdd072a59408b4816f5"
+            "sha256_download": "6b9ab51d0e35459d7ee871accfc1a2b58286d0b5b739b7156b5e597c3a131772",
+            "sha256_install": "0a8884b3cd118ac7574e373d481ec5cd13f5ad1493440eecded7799cc11d8f6a"
         },
         {
             "name": "gec xl",
@@ -98,7 +105,8 @@
             "updated": 1679352702,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "100 gecs theme, but bigger",
-            "md5": "1d009a243eb3859f88beee6a8701c006"
+            "sha256_download": "a5f43516d814f82ab72c0ea3b09e58a45237cd8de65dd5d54cdce9edc1c247fe",
+            "sha256_install": "386558d6d6c2eb53ddecf59a755723260f8c0540d7e1c197cfe8e9572b89682b"
         },
         {
             "name": "TruestTrollian",
@@ -110,7 +118,8 @@
             "updated": 1686430232,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Trollian in alternian. requires this font: https://trolltype.mspa.sudrien.net/alternian.ttf",
-            "md5": "678a8eecafa22f74666380e232538977"
+            "sha256_download": "9f990217da09e7498af72fe4fe694e5fe0cc0ec601d6a9955a279ee59fc0b576",
+            "sha256_install": "782503eb960af1e6f308c5f616cdd1aba697fe96c63b20cb56d7722f68422190"
         },
         {
             "name": "Skaianet Systems Terminal",
@@ -122,7 +131,8 @@
             "updated": 1687371053,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Terminal theme. Requires the included dejavu mono font to be installed",
-            "md5": "dc7f8589be207db231d7120a76a90fb6"
+            "sha256_download": "a2c34e35bc5e112c9da58779ba622cfc0045d8e4121f8227eb98c32ec45a79fb",
+            "sha256_install": "707159a2e7b5c4f348f7fdb6c85723c206816fe5db6799551f24bc2c04aaa2b7"
         },
         {
             "name": "JEERUBIUM",
@@ -134,7 +144,8 @@
             "updated": 1691446939,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Caliborn used, with personalised stickers & sketches",
-            "md5": "fad105279a72b691f5ce645028e83c33"
+            "sha256_download": "ae34473cda19c69193cc6ab88f0f6f7bbc454f59150a89ed74e05821b5f7008f",
+            "sha256_install": "d16a4634266c57f3cb9164d8279ff070ddb367ca2921c8fbb0d84cfc3ca209ad"
         },
         {
             "name": "JEERUBIUM REDUX",
@@ -146,7 +157,8 @@
             "updated": 1691446541,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Caliborn used, without personalised stickers & sketches",
-            "md5": "c83a4ea64a33d7ca778d76269fdb5e8c"
+            "sha256_download": "138e01645a6be35484ae5a1ff7e7b5f455c5a75923124a59c5feff1ed241d504",
+            "sha256_install": "69037c9f37d301555d6ca9ae012822fd30590ea1369aff6a94338d705d51eeb6"
         },
         {
             "name": "CHEERUBIUM",
@@ -158,7 +170,8 @@
             "updated": 1691446483,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Calliope used, with personalised stickers & sketches",
-            "md5": "beb7584827c9f38afbcaead00362c9ae"
+            "sha256_download": "94aa075a6eab779e8bd399a96190e16cd537c159b9ab5e21e444d7d600797ff4",
+            "sha256_install": "e3ffbff3b0aa9dc8b41dc95e6e573fae631e95b180c106c9c6f1b7713685db21"
         },
         {
             "name": "CHEERUBIUM REDUX",
@@ -170,7 +183,8 @@
             "updated": 1691446521,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "An imagining of the client Calliope, without personalised stickers & sketches",
-            "md5": "1743337c1ff94105788548728652765d"
+            "sha256_download": "bd4532ec0309815a8ae6ff50cfa08efe248dbc733e735e1b28ddaf1368c14832",
+            "sha256_install": "656e4342f1c58ef84597fe31ee0731799b070f19ec4c4583059e2c2ff6429f70"
         },
         {
             "name": "vriskachum",
@@ -182,7 +196,8 @@
             "updated": 1459786678,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Very blue. Vriska theme",
-            "md5": "7d5c819d160163c78b621fa9fa27b9d3"
+            "sha256_download": "cecb805d8fadd8108cea1919bc897d3010d16d333ceae8a766043d7360621018",
+            "sha256_install": "c323cd089f742b23b915c0e43d9987699691b79f5ab6eacf0840bb24f2f9e196"
         },
         {
             "name": "araneachum",
@@ -194,7 +209,8 @@
             "updated": 1465325456,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Similar to vriskachum, but lighter. Aranea theme",
-            "md5": "8159cf82b2816f68b41dd1cf6ecdc683"
+            "sha256_download": "fab9179c5fd6dfedd74b848fad255cf306eca9dd3b5f890ccec7f6ae06d8c4bb",
+            "sha256_install": "2e06d1ff3916c6a96de82ed1232ffee65a9337c43ce6d8c81b2e8fc8999dfcf8"
         },
         {
             "name": "strifekindRED",
@@ -206,7 +222,8 @@
             "updated": 1453478134,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Strifekind, but red",
-            "md5": "e039066b3e11ad148ec7627a3057cf18"
+            "sha256_download": "de3de66b80719292f8b0e41a03b0767a21d1290368ddbf5e9913d7019b846528",
+            "sha256_install": "2481ba45b5f40c84d710980e77f551a809e74ed7b87cc179c342148fac67375e"
         },
         {
             "name": "UTChum",
@@ -218,7 +235,8 @@
             "updated": 1455029682,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Undertale theme",
-            "md5": "fd47bb0fdf1d6f2fdc6fa93bf2edb96e"
+            "sha256_download": "a4af4fff76c8cff7b31a6160c9980d265ec8416cffab0770808ad206a7481010",
+            "sha256_install": "06cbfbd4e326cde86ae665ece9018f2f7fd7d3ea1b6cb96945b7ae9d77cb42fb"
         },
         {
             "name": "strifekindBLU",
@@ -230,7 +248,8 @@
             "updated": 1451422446,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Strifekind, but blue",
-            "md5": "f5ebde9c37585f49aad56094f62fc039"
+            "sha256_download": "4ed8b5064b37b90cbf667e70557c7b403fa830c57ac0be403ba50a0aa480d1f7",
+            "sha256_install": "499980ae860b3fc31db35e0eaba3f2c001691dbe897328d6a62ca8b3c63919b0"
         },
         {
             "name": "GalaxyChum",
@@ -242,7 +261,8 @@
             "updated": 1445580544,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Galaxy/space theme",
-            "md5": "ee2ee3da5ba9a61d1476afb185f83e5b"
+            "sha256_download": "cb3b84a9011488353fc3a23d24dcaf9645b5cd5c21671e0fa2da30175c747b58",
+            "sha256_install": "a36eb68dc01f61a2df1ebd26526c7007b09f81a0f13b6a4cdde8983b2ac8f5bb"
         },
         {
             "name": "trollchum",
@@ -254,7 +274,8 @@
             "updated": 1345405776,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "A mix between trollian and pesterchum",
-            "md5": "ebffb388cc90aaf0a971097796ec8a4b"
+            "sha256_download": "0858187561d9582eb3d2deb6b8039bc4ed2fcce0f31808131f56e08f49716f0e",
+            "sha256_install": "c5508a2011fabe869f9180391bfb89605e86d87479f995d79a3646daa3919ce4"
         },
         {
             "name": "HatsOff",
@@ -266,7 +287,8 @@
             "updated": 1649551330,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "Hats & squares!",
-            "md5": "6e1430f55834203b58e5369896a572f4"
+            "sha256_download": "92e99fda6577d458d8f841ad85ffb0b0b895adb364fe9da5fe85aa2900047cad",
+            "sha256_install": "a68b337f8630db6c425e5b87c57fe5021cd910142122a99a1751b755aee3d842"
         }
     ]
 }
