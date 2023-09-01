@@ -289,6 +289,19 @@
             "description": "Hats & squares!",
             "sha256_download": "92e99fda6577d458d8f841ad85ffb0b0b895adb364fe9da5fe85aa2900047cad",
             "sha256_install": "a68b337f8630db6c425e5b87c57fe5021cd910142122a99a1751b755aee3d842"
+        },
+        {
+            "name": "MSN-1.0",
+            "author": "jamie english",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/MSN-1.0.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1674001416,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "MSN Messenger theme",
+            "sha256_download": "d5667ea4f40d86338c63fcdf7bde9737a5014fbb899c7d4159e16674f968d6b1",
+            "sha256_install": "902e94782d2c3cdf33d40fd702a818246f2824c6637b7492f8a7ab0a8d17397b"
         }
     ]
 }
