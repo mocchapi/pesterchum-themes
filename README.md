@@ -15,14 +15,14 @@ You can browse this repository in a friendlier way over at https://mocchapi.gitl
 
 ## Updating the database
 To add a new theme, or update an existing theme, the `alter.py` tool should be used.  
-The `db.json` should not be edited manually.
+The `db.json` should not be edited manually.  
 
-### The easy way 
 ```sh
 python3 alter.py ingest <path_to_theme_folder_or_zip> 
-```
+```  
 The `ingest` command can be used to easily add or update a theme. It will make informed guesses at the required fields, such as version number & compatible client, and query the user for ones it cannot guess (defaults can be assumed if you provide `--noinput`).  
-All fields (except `md5`) can be overridden if needed, by providing the field name as an optional argument (IE `--version 10`).
+All fields (except the `sha256` fields) can be overridden if needed, by providing the field name as an optional argument (IE `--version 10`).
+
 
 ## Contributing
 Made a theme/update? Wanna put it in the repo? awesome!  
@@ -33,7 +33,9 @@ Here's what to do:
 - Touch nothing else
 - Make a commit & open a PR request on this repository with your changes  
 
-Can't figure it out? You may also [open an issue](https://github.com/mocchapi/pesterchum-themes/issues/new?assignees=&labels=import+request&projects=&template=theme-import-request.md&title=Add+theme%3A+THEME_NAME_HERE) as long as you fill out all the info.
+Can't figure it out? You may also [open an issue](https://github.com/mocchapi/pesterchum-themes/issues/new?assignees=&labels=import+request&projects=&template=theme-import-request.md&title=Add+theme%3A+THEME_NAME_HERE) as long as you fill out all the info.  
+
+Alternatively, you can just @ me on discord if you're in the know
 
 
 ## In this repository
@@ -44,4 +46,6 @@ Can't figure it out? You may also [open an issue](https://github.com/mocchapi/pe
 - **format.json**: the annotated structure of db.json entries
 - **alter.py**: the database update tool, used for modifying the database as well as retreiving info & statistics
 - **utils.py**: small functions required by `alter.py`
+- **hasher.py**: sha256 hasher for generating hashes of themes, can be useful for db clients
+- **integrity.txt**: automatically generated on ingest, holds a copy of each theme's `sha256_download` field. useful for hosting seperately & checking with a client in case the database gets compromised. the theme's index in the database array corrosponds with the line in integrity.txt
 - **README.md**: this file :D
