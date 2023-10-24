@@ -315,6 +315,19 @@
             "description": "the long awaited sequel. critically acclaimed. finally available. for FREE. be thankful. there are not a lot of opportunities like this.",
             "sha256_download": "9ba18b3c869125fa36bda0e4421b0c9d0ac0e0a9db04c352dbe71639524963fd",
             "sha256_install": "20d6c410f4ceb82b01b432514563d89c971897a172b83ae2ca423dd41729e1bf"
+        },
+        {
+            "name": "iChum",
+            "author": "matytoonist",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/iChum.zip",
+            "inherits": "",
+            "version": 0,
+            "updated": 1698067460,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Theme styled like a MacOS9 application",
+            "sha256_download": "5ccdb9f8d7f0556aaa4bd94af50331284fc40eadf28aa80b836918c856acd31f",
+            "sha256_install": "60c3983902078f53e8092919ae6c711226e6c947c56ea2e50841f6a85645d365"
         }
     ]
 }
