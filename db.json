@@ -354,6 +354,19 @@
             "description": "As seen in HS^2 (smaller version)",
             "sha256_download": "91484d1e3e2eb801d107d2c2bf59840a417f6a312d4c47b8ef99c4a61995d4ec",
             "sha256_install": "c4a55e0c9d420380303d585040e4ae77e21ab8f8878b8ff6ba54e3cffcef3a75"
+        },
+        {
+            "name": "intellichum",
+            "author": "(lis)anne",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/intellichum.zip",
+            "inherits": "intellichum compact",
+            "version": 0,
+            "updated": 1699042475,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "As seen in HS^2",
+            "sha256_download": "e57ec7231fc7446569038d7448dc0f988449576b91413cc6ad0ec66921221b85",
+            "sha256_install": "7df8227b5336884a8a52533cd5a766746200bb108b3a934a8e8b5b4955217e42"
         }
     ]
 }
