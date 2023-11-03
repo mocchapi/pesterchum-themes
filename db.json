@@ -367,6 +367,19 @@
             "description": "As seen in HS^2",
             "sha256_download": "e57ec7231fc7446569038d7448dc0f988449576b91413cc6ad0ec66921221b85",
             "sha256_install": "7df8227b5336884a8a52533cd5a766746200bb108b3a934a8e8b5b4955217e42"
+        },
+        {
+            "name": "intellichum compact light",
+            "author": "(lis)anne",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/intellichum compact light.zip",
+            "inherits": "intellichum compact",
+            "version": 0,
+            "updated": 1699045159,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Light mode version of intellichum compact",
+            "sha256_download": "db334f828d34b5c43f1c810663d5119e67deaf0f4919efb76d687a254eb05568",
+            "sha256_install": "4e26dd34d567b534aeb12b8f1f0584acc16b5c83912c1da6b98a36f142008a10"
         }
     ]
 }
