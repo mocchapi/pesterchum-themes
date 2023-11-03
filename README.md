@@ -11,7 +11,9 @@ This repo exists to keep track of all the themes that dont get bundled with pest
 It's also a better way of keeping track who made what.
 
 ## Browsing
-You can browse this repository in a friendlier way over at https://mocchapi.gitlab.io/PCtrb/
+You can browse this repository & direct download themes in a friendlier way over at https://mocchapi.gitlab.io/PCtrb/  
+Alternatively, you can run the latest developer version of [pesterchum](https://github.com/dpeta/pesterchum-alt-servers) to browse, install, and manage themes from this repository from inside the settings menu
+
 
 ## Updating the database
 To add a new theme, or update an existing theme, the `alter.py` tool should be used.  
@@ -28,14 +30,21 @@ All fields (except the `sha256` fields) can be overridden if needed, by providin
 Made a theme/update? Wanna put it in the repo? awesome!  
 Here's what to do:
 - Put your theme source files in the `sources` directory under a folder with the name of your theme
-- Run the alter tool with `python3 alter.py ingest sources/<your_folder_here>`
+- Run the alter tool with `python3 alter.py ingest sources/<your_them_here>`
 - Answer any questions it may ask you
 - Touch nothing else
 - Make a commit & open a PR request on this repository with your changes  
 
 Can't figure it out? You may also [open an issue](https://github.com/mocchapi/pesterchum-themes/issues/new?assignees=&labels=import+request&projects=&template=theme-import-request.md&title=Add+theme%3A+THEME_NAME_HERE) as long as you fill out all the info.  
 
-Alternatively, you can just @ me on discord if you're in the know
+Alternatively, you can just @ me on discord if you're in one of the pesterchum servers
+
+### Things to consider when making a theme for the repository
+- Please keep the file size low, preferably a handful of KB
+- If you are making one or more variations on a theme, IE a 2.5x version, consider using `inherits` & not copying over assets & properties needlessly
+- Make sure the theme name contains no potentially filesystem-forbidden characters for any platform, like "/" or ":". It should also be URL safe
+- It would be nice (but in no way required) if the style.js had well formatted whitespace indenting
+- Also you may want to check the TROLLSLUM window, ppl forget to theme it sometimes
 
 
 ## In this repository
