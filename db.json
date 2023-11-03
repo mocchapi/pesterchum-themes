@@ -380,6 +380,19 @@
             "description": "Light mode version of intellichum compact",
             "sha256_download": "db334f828d34b5c43f1c810663d5119e67deaf0f4919efb76d687a254eb05568",
             "sha256_install": "4e26dd34d567b534aeb12b8f1f0584acc16b5c83912c1da6b98a36f142008a10"
+        },
+        {
+            "name": "intellichum light",
+            "author": "(lis)anne",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/intellichum light.zip",
+            "inherits": "intellichum",
+            "version": 0,
+            "updated": 1699045182,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Light mode version of intellichum",
+            "sha256_download": "62dabdefb497fbb6396ef58f108e0d8123f007f98f30eb8429c514252ca8ec47",
+            "sha256_install": "6d7495692e9db06655697b1ef51e9a1b2479d89402dfecff1e71c6aa1861530f"
         }
     ]
 }
