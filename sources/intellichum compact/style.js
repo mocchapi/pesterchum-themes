@@ -239,6 +239,5 @@
 				"mood": 2
 			}
 		]
-	},
-	"inherits": "Pesterchum"
+	}
 }

@@ -347,13 +347,13 @@
             "author": "(lis)anne",
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/intellichum compact.zip",
-            "inherits": "Pesterchum",
-            "version": 0,
-            "updated": 1699045113,
+            "inherits": "",
+            "version": 1,
+            "updated": 1699047028,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "As seen in HS^2 (smaller version)",
-            "sha256_download": "91484d1e3e2eb801d107d2c2bf59840a417f6a312d4c47b8ef99c4a61995d4ec",
-            "sha256_install": "c4a55e0c9d420380303d585040e4ae77e21ab8f8878b8ff6ba54e3cffcef3a75"
+            "sha256_download": "c43bf1460d009c5e0f717b2deccfd6a5aa49864abb72edc69a092377fbf5e09c",
+            "sha256_install": "017f3df04642514cbcb9b4e4ea43c94d7bf6779d51016ef5e6861d09a50dee8d"
         },
         {
             "name": "intellichum",
