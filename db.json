@@ -328,6 +328,19 @@
             "description": "Theme styled like a MacOS9 application",
             "sha256_download": "5ccdb9f8d7f0556aaa4bd94af50331284fc40eadf28aa80b836918c856acd31f",
             "sha256_install": "60c3983902078f53e8092919ae6c711226e6c947c56ea2e50841f6a85645d365"
+        },
+        {
+            "name": "iChum (QT6 edition)",
+            "author": "matytoonist",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/iChum (QT6 edition).zip",
+            "inherits": "iChum",
+            "version": 0,
+            "updated": 1699045764,
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "description": "Theme styled like a MacOS9 application (version for QT6)",
+            "sha256_download": "bdb4d9c7f7a07c5fd3c6b38a91df0cad2fdb0c8c12c085c913bceb1c688bbbcf",
+            "sha256_install": "3bd674c4ebb1267250c05f6cca2ae14113d0c9d3370248a141530b1eb7eb5725"
         }
     ]
 }
