@@ -40,7 +40,7 @@ Can't figure it out? You may also [open an issue](https://github.com/mocchapi/pe
 Alternatively, you can just @ me on discord if you're in one of the pesterchum servers
 
 ### Things to consider when making a theme for the repository
-- Please keep the file size low, preferably a handful of KB
+- Please keep the file size low, preferably under 500KB, with a max of about 2MB
 - If you are making one or more variations on a theme, IE a 2.5x version, consider using `inherits` & not copying over assets & properties needlessly
 - Make sure the theme name contains no potentially filesystem-forbidden characters for any platform, like "/" or ":". It should also be URL safe
 - It would be nice (but in no way required) if the style.js had well formatted whitespace indenting
