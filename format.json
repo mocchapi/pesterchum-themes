@@ -8,22 +8,27 @@
 		// (In case theres any future revisions to the database structure)
 		// (Check "./format_versions/" for all possible versions)
 		// (New databases should use the latest version)
+		"updated_at": 1685902299,
+		// Should be the same as the "updated_at" value on the most recently updated entry (required)
+		"modified_at": 1685902299
+		// The time this database file was written to (required)
 		"name": "Pesterchum theme repository",
 		// Displayable name of the repo (optional)
 		// (Shouldn't contain newlines)
+		"description": "Primary general purpose pesterchum theme repo & archive",
+		// Displayable description for this theme database's purpose or contents (optional)
+		// (May contain newlines)
 		"new_url": "https://example.com/new_database_url.json",
 		// To be used if the URL of the database changes (optional)
 		// (Leave as an empty string if this is the current most up to date URL)
 		// (Clients should not automatically accept this new database, but prompt the user to swap over to it)
 		"contact_instructions": "Message telecastTadpole on IRC at irc.pesterchum.xyz",
-		// To allow reporting of issues or suggestions (optional)
+		// Instructions on how to contact the administrator(s), to allow reporting of issues or suggestions (optional)
 		// (Should be human-readable & ready to display as-is to the user, or empty)
-		"updated_at": 1685902299,
-		// Should be the same as the "updated_at" value on the most recently updated entry (required)
-		"modified_at": 1685902299
-		// The time this database file was written to (required)
+		// (May contain newlines)
+		"submission_page": ""
+		// URL to a webpage containing instructions for submitting new themes to this database (optional)
 	},
-
 	"entries": [ 
 		// All repository entries (array)
 		{
@@ -55,13 +60,14 @@
 			// (This value should not be changed after initial ingestion of the theme)
 			"inherits": "",
 			// Name of the theme this entry inherits from (required)
-			// (Clients should check if this theme is installed & install it if it isnt)
+			// (Must be the same as the style.js's "inherits" value)
+			// (Clients should check if the inherited theme is installed & install it if not)
 			// (Inherits should either be available on this database, or be an in-built theme)
 			"source": "https://github.com/example",
 			// URL to source code for this entry (optional)
 			"description": "",
 			// short description of the theme (optional)
-			// (Can contain newlines)
+			// (May contain newlines)
 			"sha256_download":"35cd55229069eac66c10ffe963dccfb64dd1073685f5a13710139821f430f39b",
 			// sha256sum of whatever file the "download" url points to (required)	
 			// (may be the same as sha256_install if the downlaoded file is the same as the installed one, IE godot resource)
