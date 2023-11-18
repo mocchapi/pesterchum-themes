@@ -136,7 +136,7 @@
       "size": [195, 200],
       "label": { "text": "TROLLSLUM",
                  "style": "color: rgba(0, 0, 0, 100%) ;font:bold; font-family: 'Impact';border:0px;" },
-      "chumroll": {"style": "border:2px solid black; background-color: black;color: black;font: bold;font-family: 'Comic Sans MS';selection-background-color:#646464; " }
+      "chumroll": {"style": "border:2px solid black; background-color: white;color: black;font: bold;font-family: 'Comic Sans MS';selection-background-color:#646464; " }
   },
   "mychumhandle": { "label": { "text": "Gechandle:",
                                "loc": [0,0],

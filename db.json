@@ -88,12 +88,12 @@
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/gec.zip",
             "inherits": "",
-            "version": 1,
-            "updated": 1682422088,
+            "version": 2,
+            "updated": 1700313251,
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "description": "100 gecs theme",
-            "sha256_download": "6b9ab51d0e35459d7ee871accfc1a2b58286d0b5b739b7156b5e597c3a131772",
-            "sha256_install": "0a8884b3cd118ac7574e373d481ec5cd13f5ad1493440eecded7799cc11d8f6a"
+            "sha256_download": "1b11332a3b92c8e64c40a233917e75a621edd6296eb544555e43ea7ead1edb2d",
+            "sha256_install": "6b5ce3dc92632f558ec2e500305abf3496ee27631a5b3446a105b72aa6b3e33f"
         },
         {
             "name": "gec xl",
