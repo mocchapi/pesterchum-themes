@@ -11,7 +11,7 @@
 		"updated_at": 1685902299,
 		// Should be the same as the "updated_at" value on the most recently updated entry (required)
 		"modified_at": 1685902299
-		// The time this database file was written to (required)
+		// The time this database file was last written to (required)
 		"name": "Pesterchum theme repository",
 		// Displayable name of the repo (optional)
 		// (Shouldn't contain newlines)
@@ -26,7 +26,7 @@
 		// Instructions on how to contact the administrator(s), to allow reporting of issues or suggestions (optional)
 		// (Should be human-readable & ready to display as-is to the user, or empty)
 		// (May contain newlines)
-		"submission_page": ""
+		"submission_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md#contributing"
 		// URL to a webpage containing instructions for submitting new themes to this database (optional)
 	},
 	"entries": [ 
