@@ -1,4 +1,4 @@
-// (optional) keys should exist, but have the value be empty if unused
+// (optional) keys should exist, but have the value be empty if unused (IE, empty "" string, 0-element [] array)
 
 {
 	"meta": {
@@ -26,7 +26,7 @@
 		// Instructions on how to contact the administrator(s), to allow reporting of issues or suggestions (optional)
 		// (Should be human-readable & ready to display as-is to the user, or empty)
 		// (May contain newlines)
-		"submission_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md#contributing"
+		"submission_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md#contributing",
 		// URL to a webpage containing instructions for submitting new themes to this database (optional)
 	},
 	"entries": [ 
@@ -63,6 +63,10 @@
 			// (Must be the same as the style.js's "inherits" value)
 			// (Clients should check if the inherited theme is installed & install it if not)
 			// (Inherits should either be available on this database, or be an in-built theme)
+			"icon": "https://example.com/icon.png",
+			// URL to an icon/logo image (optional)
+			"images": ["https://example.com/screenshot_1.png", "https://example.com/screenshot2.jpg"],
+			// Array of URLs to screenshots of what the theme looks like (optional)
 			"source": "https://github.com/example",
 			// URL to source code for this entry (optional)
 			"description": "",
