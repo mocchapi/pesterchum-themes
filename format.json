@@ -47,7 +47,7 @@
 			// URL to direct download for this file (required)
 			"version": 0,
 			// Version of the theme, can be used for an auto-update mechanism (required)
-			// (must be changed when theme contents are altered, can stay unchanged if only db metadata is changed)
+			// (must be changed when theme contents are altered, can stay unchanged if only db metadata like source is changed)
 			"updated_at": 1685902299,
 			// UNIX epoch in UTC of when this entry's "version" was last updated (required)
 			"modified_at": 1685902299,
@@ -79,6 +79,7 @@
 			// sha256sum of the installed (unzipped) files gained from the download (required) 
 			// (if applicable, recursively sha256 the resulting directory contents, sorted alphabetically)
 			// (May be the same as "sha256_download")
+			// (Can be used by clients to identify if a theme is already installed without keeping a manifest)
 		}
 	]
 }
