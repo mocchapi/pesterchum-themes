@@ -63,6 +63,11 @@
 			// (Must be the same as the style.js's "inherits" value)
 			// (Clients should check if the inherited theme is installed & install it if not)
 			// (Inherits should either be available on this database, or be an in-built theme)
+			"size_download": 100,
+			// Size in bytes of the download (required)
+			"size_install": 100,
+			// Size in bytes of the installed theme (required)
+			// (Can be equal to size_download, and different when downloads are zipped or otherwise compressed)
 			"icon": "https://example.com/icon.png",
 			// URL to an icon/logo image (optional)
 			"images": ["https://example.com/screenshot_1.png", "https://example.com/screenshot2.jpg"],
