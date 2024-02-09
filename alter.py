@@ -70,23 +70,38 @@ def format_entry(
     client="",
     download="",
     version=0,
-    updated=round(time.time()),
+    updated_at=round(time.time()),
+    created_at=round(time.time()),
+    modified_at=round(time.time()),
+    added_at=round(time.time()),
     source="",
     description="",
     inherits="",
     sha256_download="<to be computed after write>",
     sha256_install="",
+    size_download='<to be computed after write',
+    size_install=0,
+    icon="",
+    images=[],
+
 ):
     return {
         "name": name,
         "author": author,
+        "description": description,
         "client": client,
         "download": download,
-        "inherits": inherits,
         "version": version,
-        "updated": updated,
+        "updated_at": updated_at,
+        "modified_at": modified_at,
+        "created_at": created_at,
+        "added_at": added_at,
+        "inherits": inherits,
+        "size_download": size_download,
+        "size_install": size_install,
+        "icon": icon,
+        "images": images,
         "source": source,
-        "description": description,
         "sha256_download": sha256_download,
         "sha256_install": sha256_install,
     }
@@ -106,7 +121,7 @@ def parse(args_in):
         "--host",
         type=str,
         default="https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/",
-        help="Default download host",
+        help="Default raw repository URL",
     )
     parser.add_argument(
         "--destination", type=Path, default=Path("./themes/"), help="Generated downloads destination folder"
@@ -128,7 +143,7 @@ def parse(args_in):
     )
     ingest_parser.add_argument(
         "--client",
-        choices=["pesterchum", "godot"],
+        choices=["pesterchum", "godot", "pco"],
         default=None,
         help="Override client type",
     )
@@ -148,6 +163,13 @@ def parse(args_in):
     ingest_parser.add_argument(
         "--updated", type=int, default=None, help="Override last updated timestamp"
     )
+
+    ingest_parser.add_argument('--modified', type=int, default=None, help="Override last modify timestamp")
+    ingest_parser.add_argument('--added', type=int, default=None, help="Override added timestamp")
+    ingest_parser.add_argument('--created', type=int, default=None, help="Override creation timestamp")
+    ingest_parser.add_argument('--icon', type=str, default=None, help="Override icon image URL")
+    ingest_parser.add_argument('--images', type=str, default=None, help="Override screenshot image URLs", nargs='*')
+
     ingest_parser.add_argument(
         '--integrity-file', type=Path, default=Path('integrity.txt', help="Path where the download integrity file is written to")
     )
@@ -207,15 +229,15 @@ def handle_validate(db, args):
             c_path = path+'/'+key
             in_dbitem = key in db_item
             in_fitem = key in format_item
-            friendly_name = f'{c_path} ' + (db_item["name"] if 'name' in db_item else '')
+            friendly_name = f'{c_path:<30} ' + '{0:<30}'.format((db_item["name"] if 'name' in db_item else ''))
             friendly_name = f'{friendly_name:<45}'
             t_dbitem = type(db_item.get(key))
             t_fitem = type(format_item.get(key))
             did_error = True
             if in_dbitem and not in_fitem:
-                print(friendly_name,f"Has illegal key   {key:^10} of type {t_dbitem}")
+                print(friendly_name,f"Has illegal key         {key:^15} of type {t_dbitem}")
             elif in_fitem and not in_dbitem:
-                print(friendly_name,f"Is missing required key {key:^10} of type {t_fitem}")
+                print(friendly_name,f"Is missing required key {key:^15} of type {t_fitem}")
             elif t_dbitem != t_fitem:
                 print(friendly_name+':','type mismatch. format expects',t_dbitem,'but db has',t_fitem)
                 print(" "*len(friendly_name),"Values:",db_item[key],'vs',format_item[key])
@@ -273,10 +295,10 @@ def re_ingest(db, index, noinput=False, integrity_file=None, source_path=None):
     name = entry['name']
     print(f"Re-ingesting #{index} {name}")
     if source_path == None:
-        source_path = './sources/'+name
+        source_path = './sources/'+entry['client']+'/'+name
     if integrity_file == None:
         integrity_file = 'integrity.txt'
-    text_args = ['ingest',source_path, '--no-version-increase','--updated',str(entry['updated']),'--integrity-file',str(integrity_file)]
+    text_args = ['ingest',source_path, '--no-version-increase','--updated',str(entry['updated_at']),'--integrity-file',str(integrity_file)]
     print('  ','with arguments:',text_args)
     if noinput:
         text_args.insert(0, '--noinput')
@@ -290,9 +312,9 @@ def handle_search(db, args):
             continue
         if args.inherits != None:
             if not utils.simple_fuzzy_match(args.inherits, entry['inherits']): continue
-        if args.after != None and entry['updated'] <= args.after:
+        if args.after != None and entry['updated_at'] <= args.after:
             continue
-        if args.before != None and args.before <= entry['updated']:
+        if args.before != None and args.before <= entry['updated_at']:
             continue
         if args.search != None:
             search_ok = False
@@ -422,11 +444,54 @@ def handle_ingest(db, args):
         print("  Author is forced to:",args.author)
 
     if args.updated == None:
-        args.updated = round(utils.get_modify_time(args.target))
-        if args.updated == -1:
-            args.updated = round(time.time())
+        if has_changed:
+            args.updated = round(utils.get_modify_time(args.target))
+            if args.updated == -1:
+                args.updated = round(time.time())
+        else:
+            if has_entry:
+               args.updated = db["entries"][idx]["updated_at"]
+            else:
+                args.updated = round(time.time())
     else:
         print("  Updated is forced to:",args.updated,'('+utils.timestamp_to_human(args.updated)+')')
+
+    if args.modified == None:
+        args.modified = round(time.time())
+    else:
+        print("  modified is forced to:",args.modified,'('+utils.timestamp_to_human(args.updated)+')')
+
+    if args.created == None:   
+        if has_entry:
+            if db["entries"][idx].get('created_at') == None and db['entries'][idx].get('version',0) == 0:
+                args.created = args.updated
+            else:
+                args.created = db["entries"][idx].get('created_at', round(utils.get_creation_time(args.target)))
+        else:
+            args.created = round(utils.get_creation_time(args.target))
+    else:
+        print("  Created is forced to:",args.created,'('+utils.timestamp_to_human(args.created)+')')
+
+    if args.added == None:
+        if has_entry:
+            args.added = db["entries"][idx].get('added', round(time.time()))
+        else:
+            args.added = round(time.time())
+    else:
+        print("  Added is forced to:",args.added,'('+utils.timestamp_to_human(args.created)+')')
+
+    if args.icon == None:
+        if has_changed or db["entries"][idx].get('icon', False) == False:
+            args.icon = client_pesterchum_style.get('main',{}).get('icon', '').replace('$path', args.host + str(args.target))
+        else:
+            args.icon = db["entries"][idx].get('icon','')
+    else:
+        print("  Icon is forced to:",args.icon)
+
+    if args.images == None:
+        args.images = db["entries"][idx].get('images',[])
+    else:
+        print("  Images is forced to:",args.images)
 
     if args.inherits == None:
         # TODO: extract this from style.json
@@ -443,9 +508,12 @@ def handle_ingest(db, args):
     download_name = ""
     match args.client:
         case "pesterchum":
-            download_name = args.host + args.client + "/" + args.name + ".zip"
+            download_name = args.host + 'themes/' + args.client + "/" + args.name + ".zip"
         case "godot":
             print("Godot not yet supported")
+            return
+        case "pco":
+            print("Pesterchum.online not yet supported")
             return
     
     print("  Download URL will be:",download_name)
@@ -458,9 +526,15 @@ def handle_ingest(db, args):
         version=args.version,
         source=args.source,
         description=args.description,
+        icon=args.icon,
+        images=args.images,
         inherits=args.inherits,
-        updated=args.updated,
+        updated_at=args.updated,
+        created_at=args.created,
+        added_at=args.added,
+        modified_at=args.modified,
         sha256_install = sha256_install,
+        size_install=utils.get_file_size(args.target),
     )
 
 
@@ -516,10 +590,19 @@ def handle_ingest(db, args):
                     f"Error ingesting {dst}: Pesterchum themes must be a folder or a .zip file"
                 )
 
+    if db['meta'].get('updated_at', 0) < args.updated:
+        db['meta']['updated_at'] = args.updated
+    db['meta']['modified_at'] = round(time.time())
+
     print()
     print("Computing new download hash...")
     data['sha256_download'] = hasher.sha256(final_download_path)
     print(data['sha256_download'])
+    print()
+
+    print("Computing new download size...")
+    data['size_download'] = utils.get_file_size(final_download_path)
+    print(data['size_download'])
     print()
 
     integrity_list = make_integrity_list(db)
@@ -551,14 +634,14 @@ def handle_stats(db, args):
             sorted_authors = {f'{author}{awards[idx] if idx <=2 else ""}':[x['name'] for x in authors[author]] for idx, author in enumerate(sorted(authors.keys(), key=lambda x: -len(authors[x])))}
             print(utils.treeprint(sorted_authors, root_name="Authors sorted by amount of published themes", non_node_formatter=lambda key,value: str(value), node_formatter=lambda key,value: '►'+str(key)))
         case 'history':
-            sorted_entries = sorted(db['entries'],key=lambda x: x['updated'])
+            sorted_entries = sorted(db['entries'],key=lambda x: x['updated_at'])
             year_dict = {}
             for i in range(
-                    utils.timestamp_to_year(sorted_entries[0]['updated']),
-                    utils.timestamp_to_year(sorted_entries[-1]['updated'])+1
+                    utils.timestamp_to_year(sorted_entries[0]['updated_at']),
+                    utils.timestamp_to_year(sorted_entries[-1]['updated_at'])+1
                     ):
                 # My worst line of python ever
-                year_dict[i] = [f"{x['name']+(awards[0] if (x == sorted_entries[0] or x == sorted_entries[-1]) else (awards[idx] if idx <= 3 else (awards[len(sorted_entries)-idx-1] if (len(sorted_entries)-idx-1) <=3 else ''))):<25} {utils.timestamp_to_human(x['updated'])}" for idx,x in enumerate(sorted_entries) if utils.timestamp_to_year(x['updated']) == i]
+                year_dict[i] = [f"{x['name']+(awards[0] if (x == sorted_entries[0] or x == sorted_entries[-1]) else (awards[idx] if idx <= 3 else (awards[len(sorted_entries)-idx-1] if (len(sorted_entries)-idx-1) <=3 else ''))):<25} {utils.timestamp_to_human(x['updated_at'])}" for idx,x in enumerate(sorted_entries) if utils.timestamp_to_year(x['updated_at']) == i]
             
             print(utils.treeprint(year_dict, root_name="Timeline of pesterchum themes", non_node_formatter=lambda key,val: '►'+str(val)))
         case 'dependencies':

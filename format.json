@@ -10,7 +10,7 @@
 		// (New databases should use the latest version)
 		"updated_at": 1685902299,
 		// Should be the same as the "updated_at" value on the most recently updated entry (required)
-		"modified_at": 1685902299
+		"modified_at": 1685902299,
 		// The time this database file was last written to (required)
 		"name": "Pesterchum theme repository",
 		// Displayable name of the repo (optional)
@@ -22,11 +22,9 @@
 		// To be used if the URL of the database changes (optional)
 		// (Leave as an empty string if this is the current most up to date URL)
 		// (Clients should not automatically accept this new database, but prompt the user to swap over to it)
-		"contact_instructions": "Message telecastTadpole on IRC at irc.pesterchum.xyz",
-		// Instructions on how to contact the administrator(s), to allow reporting of issues or suggestions (optional)
-		// (Should be human-readable & ready to display as-is to the user, or empty)
-		// (May contain newlines)
-		"submission_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md#contributing",
+		"info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
+		// URL to a webpage for general information. This may contain contact instructions (optional)
+		"submission_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md#contributing"
 		// URL to a webpage containing instructions for submitting new themes to this database (optional)
 	},
 	"entries": [ 
