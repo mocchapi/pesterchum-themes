@@ -73,7 +73,7 @@ def format_entry(
     updated_at=round(time.time()),
     created_at=round(time.time()),
     modified_at=round(time.time()),
-    added_at=round(time.time()),
+    added_at=-1,
     source="",
     description="",
     inherits="",
@@ -474,7 +474,7 @@ def handle_ingest(db, args):
 
     if args.added == None:
         if has_entry:
-            args.added = db["entries"][idx].get('added', round(time.time()))
+            args.added = db["entries"][idx].get('added_at', round(time.time()))
         else:
             args.added = round(time.time())
     else:
