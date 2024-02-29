@@ -120,7 +120,7 @@ def parse(args_in):
     parser.add_argument(
         "--host",
         type=str,
-        default="https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/",
+        default="https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/",
         help="Default raw repository URL",
     )
     parser.add_argument(
@@ -260,6 +260,15 @@ def handle_validate(db, args):
                 errors += recurse(db_item[key], format_item[key], c_path)
         return errors
     errors = recurse(db, fdict)
+
+    for idx,item in enumerate(db.get('entries',[])):
+        friendly_name = f'{(f"entries/{idx}"):<30} ' + '{0:<30}'.format(item.get('name'))
+        friendly_name = f'{friendly_name:<45}'
+        if item.get('sha256_download', None) != hasher.sha256_file('themes/' + item.get('client') +'/'+ item.get('name')+'.zip'):
+            print(friendly_name,f"Has an incorrect hash   {'sha_256_download':^15}")
+            errored_entries.add(idx)
+            errors += 1
+
     if errors == 0:
         print("Passed with no faults")
         if args.fix:
