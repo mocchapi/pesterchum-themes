@@ -596,7 +596,7 @@ def handle_ingest(db, args):
 
     print()
     print("Computing new download hash...")
-    data['sha256_download'] = hasher.sha256(final_download_path)
+    data['sha256_download'] = hasher.sha256_file(final_download_path)
     print(data['sha256_download'])
     print()
 
