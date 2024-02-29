@@ -84,9 +84,30 @@ def get_modify_time(path):
         return most_recent
     raise FileNotFoundError()
 
+def get_creation_time(path):
+    if os.path.isfile(path):
+        return os.path.getctime(path)
+    elif os.path.isdir(path):
+        most_recent = -1
+        for item in os.listdir(path):
+            new_time = get_creation_time(os.path.join(path, item))
+            if new_time > most_recent:
+                most_recent = new_time
+        return most_recent
+    raise FileNotFoundError()
+
 def timestamp_to_human(timestamp):
     return DT.fromtimestamp(timestamp).strftime("%d/%m/%Y %H:%M")
 
+def get_file_size(path):
+    size = 0
+    if os.path.isfile(path):
+        return os.path.getsize(path)
+    elif os.path.isdir(path):
+        for item in os.listdir(path):
+            size += get_file_size(os.path.join(path, item))
+        return size
+    raise FileNotFoundError()
 
 def query(question, default=None, noinput=False, display_default=True):
     question = "> " + question

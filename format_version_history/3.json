@@ -1,0 +1,54 @@
+// (optional) keys should exist, but have the value be empty if unused
+
+{
+	"meta": {
+		// Metadata, may be expanded in future versions
+		"format_version": 3,
+		// format version this database uses (required)
+		// (In case theres any future revisions to the database structure)
+		// (Check "./format_versions/" for all possible versions)
+		// (New databases should use the latest version)
+		"name": "Pesterchum theme repository"
+		// Displayable name of the repo (optional)
+		// (Shouldn't contain newlines)
+	},
+
+	"entries": [ 
+		// All repository entries (array)
+		{
+			"name": "trollian dark",
+			// Theme name (required)
+			// (must be unqiue between all entries with the same "client" value)
+			// (should contain only valid characters for a folder/file name, so no '/', '\n', ':', etc)
+			"author": "(lis)anne",
+			// Author(s) name(s) (required)
+			// (Seperate multiple authors by ', ' like '(lis)anne, mocha')
+			// (Shouldn't contain newlines)
+			"client": "pesterchum",
+			// Compatible client, either "pesterchum" or "godot" (required)
+			// (Shouldn't contain newlines)
+			"download": "https://example.com/trollian_dark.zip",
+			// URL to direct download for this file (required)
+			"version": 0,
+			// Version of the theme, can be used for an auto-update mechanism (required)
+			// (must be changed when theme contents are altered, can stay unchanged if only db metadata is changed)
+			"updated": 1685902299,
+			// UNIX epoch in UTC of when this entry was last updated (required)
+			"inherits": "",
+			// Name of the theme this entry inherits from (required)
+			// (Clients should check if this theme is installed & install it if it isnt)
+			// (Inherits should either be available on this database, or be an in-built theme)
+			"source": "https://github.com/example",
+			// URL to source code (optional)
+			"description": "",
+			// short description of the theme (optional)
+			// (Can contain newlines)
+			"sha256_download":"35cd55229069eac66c10ffe963dccfb64dd1073685f5a13710139821f430f39b",
+			// sha256sum of whatever file the "download" url points to (required)	
+			// (may be the same as sha256_install if the downlaoded file is the same as the installed one, IE godot resource)
+			"sha256_install":"4bed376c97a7865ba9711f8e86e15576ac7318aaaf52244928b5e4d5d1f0c21f"
+			// sha256sum of the installed (unzipped) files gained from the download (required) 
+			// (if applicable, recursively sha256 the resulting directory contents, sorted alphabetically)
+		}
+	]
+}
