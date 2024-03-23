@@ -2,8 +2,8 @@
     "meta": {
         "format_version": 4,
         "name": "Pesterchum theme repository",
-        "updated_at": 1700313250,
-        "modified_at": 1709169187,
+        "updated_at": 1711136092,
+        "modified_at": 1711155601,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -609,6 +609,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "62dabdefb497fbb6396ef58f108e0d8123f007f98f30eb8429c514252ca8ec47",
             "sha256_install": "6d7495692e9db06655697b1ef51e9a1b2479d89402dfecff1e71c6aa1861530f"
+        },
+        {
+            "name": "LOLCATchum",
+            "author": "jaime maz",
+            "description": "meowmeowmeowmeowmeowmeowmeowmeowmeow",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/LOLCATchum.zip",
+            "version": 0,
+            "updated_at": 1711136092,
+            "modified_at": 1711155580,
+            "created_at": 1711155478,
+            "added_at": 1711155580,
+            "inherits": "pesterchum2.5",
+            "size_download": 480897,
+            "size_install": 580876,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/LOLCATchum/trayicon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "322fcfe956187a39b80db5cc333d1c41298472757a260f633207be86c2d2158b",
+            "sha256_install": "b838d142e6dbd3a74818aed118bc3044a1a4fe98f08f171e6e7b2d74c8ff2255"
         }
     ]
 }
