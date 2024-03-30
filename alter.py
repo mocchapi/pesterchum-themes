@@ -646,8 +646,8 @@ def handle_stats(db, args):
             sorted_entries = sorted(db['entries'],key=lambda x: x['updated_at'])
             year_dict = {}
             for i in range(
-                    utils.timestamp_to_year(sorted_entries[0]['updated_at']),
-                    utils.timestamp_to_year(sorted_entries[-1]['updated_at'])+1
+                    utils.timestamp_to_year(sorted_entries[0]['created_at']),
+                    utils.timestamp_to_year(sorted_entries[-1]['created_at'])+1
                     ):
                 # My worst line of python ever
                 year_dict[i] = [f"{x['name']+(awards[0] if (x == sorted_entries[0] or x == sorted_entries[-1]) else (awards[idx] if idx <= 3 else (awards[len(sorted_entries)-idx-1] if (len(sorted_entries)-idx-1) <=3 else ''))):<25} {utils.timestamp_to_human(x['updated_at'])}" for idx,x in enumerate(sorted_entries) if utils.timestamp_to_year(x['updated_at']) == i]

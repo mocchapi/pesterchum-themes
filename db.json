@@ -2,8 +2,8 @@
     "meta": {
         "format_version": 4,
         "name": "Pesterchum theme repository",
-        "updated_at": 1711136092,
-        "modified_at": 1711157024,
+        "updated_at": 1711804092,
+        "modified_at": 1711820732,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -909,6 +909,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "f9b39c9a0b78a739fcc26df34ed28c8cbde4bccac3e5834ec7abfde0b9bbf311",
             "sha256_install": "a20b69a99cbc2a93ead26512d9376e81aab91c87e52a631ebb2605973006e5ad"
+        },
+        {
+            "name": "C_L_I_E_N_T",
+            "author": "Vinn/Divy",
+            "description": "a theme similar to the original pesterchum theme but in green and black",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/C_L_I_E_N_T.zip",
+            "version": 0,
+            "updated_at": 1711804092,
+            "modified_at": 1711820729,
+            "created_at": 1711812278,
+            "added_at": 1711820729,
+            "inherits": "",
+            "size_download": 28514,
+            "size_install": 50406,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/C_L_I_E_N_T/trayicon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "a5422988ff981c8896cebaa94c5af4b4ce9f18fbb0f1a9a5f62dffc278579e3b",
+            "sha256_install": "4a84bdc55ffc3c0a4c075fe412d6ff97e07b10f106299a5bf0dcddeeb5cfb1d4"
         }
     ]
 }
