@@ -1,5 +1,8 @@
 {
 	"main": {
+		"fonts": [
+			"$path/dejavu.ttf"
+		],
 		"style": "background-repeat: no-repeat; ",
 		"background-image": "$path/pcbgfinal.png",
 		"size": [
@@ -263,10 +266,10 @@
 			"style": "color: #ff00ff33; background: #000000; font-family: 'Dejavu Sans Mono'; font: bold; selection-background-color: #ff919191; border-color: #ff00ff33; "
 		},
 		"addchum": {
-			"style": "background-color: #00000000; border-color: #00000000; color: #00000000; background-image: url($path/add.png); ",
+			"style": "background-color: #00000000; border-color: #0000f91b; color: #00000000; background-image: url($path/add.png); ",
 			"loc": [
 				308,
-				437
+				446
 			],
 			"size": [
 				119,
@@ -275,11 +278,11 @@
 			"text": ""
 		},
 		"pester": {
-			"style": "background-color: #00000000; border-color: #00000000; color: #00000000; background-image: url($path/contact.png); ",
-			"pressed": "background: rgb(255, 255, 255, 30%); ",
+			"style": "border-color: #00000000; background-image: url($path/contact.png); background-color: #00000000; ",
+			"pressed": "background: url($path/contact.png); ",
 			"loc": [
 				308,
-				372
+				373
 			],
 			"size": [
 				119,
@@ -288,11 +291,11 @@
 			"text": ""
 		},
 		"block": {
-			"style": "color: #00000000; background-color: #00000000; border-color: #00000000; background-image: url($path/terminate.png); ",
-			"pressed": "",
+			"style": "color: #00a12626; background-color: #00ffa2a2; border-color: #00000000; background-image: url($path/terminate.png); ",
+			"pressed": "background: rgb(255, 255, 255, 30%); ",
 			"loc": [
 				308,
-				500
+				519
 			],
 			"size": [
 				119,
