@@ -3,7 +3,7 @@
         "format_version": 4,
         "name": "Pesterchum theme repository",
         "updated_at": 1711827047,
-        "modified_at": 1711827844,
+        "modified_at": 1727795272,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -929,6 +929,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "a5422988ff981c8896cebaa94c5af4b4ce9f18fbb0f1a9a5f62dffc278579e3b",
             "sha256_install": "4a84bdc55ffc3c0a4c075fe412d6ff97e07b10f106299a5bf0dcddeeb5cfb1d4"
+        },
+        {
+            "name": "AmphibiChum",
+            "author": "pesco",
+            "description": "forg",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/AmphibiChum.zip",
+            "version": 0,
+            "updated_at": 1611285480,
+            "modified_at": 1727795270,
+            "created_at": 1727794796,
+            "added_at": 1727795270,
+            "inherits": "pesterchum2.5",
+            "size_download": 792473,
+            "size_install": 1891983,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/AmphibiChum/trayicon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "e9b7ab5e313841aa2d5c5c5fce482b1a6b7ed28976488297ae478cae87d1ecae",
+            "sha256_install": "b813aa73efe10a2e3cbc58805a202beb07e8a5cf6a7a814c3d44108df79b6eb1"
         }
     ]
 }
