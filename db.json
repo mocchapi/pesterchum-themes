@@ -3,7 +3,7 @@
         "format_version": 4,
         "name": "Pesterchum theme repository",
         "updated_at": 1711827047,
-        "modified_at": 1727795272,
+        "modified_at": 1728486942,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -949,6 +949,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "e9b7ab5e313841aa2d5c5c5fce482b1a6b7ed28976488297ae478cae87d1ecae",
             "sha256_install": "b813aa73efe10a2e3cbc58805a202beb07e8a5cf6a7a814c3d44108df79b6eb1"
+        },
+        {
+            "name": "Buddyblink1.2",
+            "author": "sn0wbat, crimson-catalyst",
+            "description": "A theme for the glowan fanspecies; https://www.deviantart.com/magdaneela/art/Buddyblink-Pesterchum-theme-505903589",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/Buddyblink1.2.zip",
+            "version": 0,
+            "updated_at": 1403370720,
+            "modified_at": 1728486892,
+            "created_at": 1728485995,
+            "added_at": 1728486892,
+            "inherits": "",
+            "size_download": 107989,
+            "size_install": 135189,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/Buddyblink1.2/trayicon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "8b06dcb8cf3742f1323e8293ae02f8f6881b5513ccf33223293c45093c2dfa4a",
+            "sha256_install": "19ac929478aed13ea2f3b4e44072c3affcbae21c5153bacfe66f26c13d03384b"
         }
     ]
 }
