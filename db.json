@@ -2,8 +2,8 @@
     "meta": {
         "format_version": 4,
         "name": "Pesterchum theme repository",
-        "updated_at": 1711827047,
-        "modified_at": 1728486942,
+        "updated_at": 1737513211,
+        "modified_at": 1737515028,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -969,6 +969,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "8b06dcb8cf3742f1323e8293ae02f8f6881b5513ccf33223293c45093c2dfa4a",
             "sha256_install": "19ac929478aed13ea2f3b4e44072c3affcbae21c5153bacfe66f26c13d03384b"
+        },
+        {
+            "name": "ArachnidsCrossing",
+            "author": "(lis)anne",
+            "description": "Based on Animal Crossing: Wild World for NDS",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/ArachnidsCrossing.zip",
+            "version": 0,
+            "updated_at": 1737513211,
+            "modified_at": 1737514999,
+            "created_at": 1737513211,
+            "added_at": 1737514999,
+            "inherits": "pesterchum",
+            "size_download": 187813,
+            "size_install": 280749,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/ArachnidsCrossing/final assets/icon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "6e30bb795c252fa400d8a4d3e3a0951afa698084e277efc5fed98bb80bac8e89",
+            "sha256_install": "30ca7c554dbfdf3195e9665b4ddba8a19f0f632502e41d165b8707705603cb91"
         }
     ]
 }
