@@ -2,8 +2,8 @@
     "meta": {
         "format_version": 4,
         "name": "Pesterchum theme repository",
-        "updated_at": 1737513211,
-        "modified_at": 1737515028,
+        "updated_at": 1738245878,
+        "modified_at": 1738266121,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -989,6 +989,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "6e30bb795c252fa400d8a4d3e3a0951afa698084e277efc5fed98bb80bac8e89",
             "sha256_install": "30ca7c554dbfdf3195e9665b4ddba8a19f0f632502e41d165b8707705603cb91"
+        },
+        {
+            "name": "ChivvyConfidante",
+            "author": "matytoonist",
+            "description": "You are CANOPIES SWAYING FORTH, a THIRD GENERATION ITERATOR, and today is the day! The day your pet project of a new client for the GLOBAL LINE goes out. The ICONS, the COLORS, certainly more interesting then just a solely text based client with archaic file sharing capabilities jury rigged in. You are partially wondering if the SLUGCATS, SCAVENGERS, or YELLOW LIZARDS if they pick up the pace, will end up using it in the future, it is a fair thought to consider in your opinion. Moving over to the OVERSEER's HOLOGRAM, sifting through your hectic mess of a LINK, you pull up the FILE, and UPLOAD the client, unbeknownst to you however, your world isn't the only one that recieved the new client you made: CHIVVYCONFIDANTE. (commissioned by marinik)",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/ChivvyConfidante.zip",
+            "version": 0,
+            "updated_at": 1738245878,
+            "modified_at": 1738266066,
+            "created_at": 1738261745,
+            "added_at": 1738266066,
+            "inherits": "",
+            "size_download": 808236,
+            "size_install": 1713345,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/ChivvyConfidante/acceptant-icon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "6436603cc3a9d77f4d9b7678086e497a659df1b5a1388a913dce2aabbe941edd",
+            "sha256_install": "4491aceed5611d68edf930176045ededc468a3eac68dfc34f5f66c545c015fa8"
         }
     ]
 }
