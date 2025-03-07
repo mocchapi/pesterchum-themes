@@ -51,7 +51,7 @@
 			"ceasesound": "$path/coreOff.wav"
 		},
 		"chums": {
-			"style": "background-color: #7f937f7f; border-radius: 22px; color: #00ffffff; font: bold; font-size: 14px; font-family: 'Courier'; selection-background-color: #ff937f7f; ",
+			"style": "background-color: #7f937f7f; border-radius: 22px; color: #ff000000; font: bold; font-size: 14px; font-family: 'Courier'; selection-background-color: #ff937f7f; ",
 			"loc": [
 				51,
 				89

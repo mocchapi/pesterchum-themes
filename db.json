@@ -2,8 +2,8 @@
     "meta": {
         "format_version": 4,
         "name": "Pesterchum theme repository",
-        "updated_at": 1738245878,
-        "modified_at": 1738266121,
+        "updated_at": 1741303710,
+        "modified_at": 1741389393,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -996,19 +996,19 @@
             "description": "You are CANOPIES SWAYING FORTH, a THIRD GENERATION ITERATOR, and today is the day! The day your pet project of a new client for the GLOBAL LINE goes out. The ICONS, the COLORS, certainly more interesting then just a solely text based client with archaic file sharing capabilities jury rigged in. You are partially wondering if the SLUGCATS, SCAVENGERS, or YELLOW LIZARDS if they pick up the pace, will end up using it in the future, it is a fair thought to consider in your opinion. Moving over to the OVERSEER's HOLOGRAM, sifting through your hectic mess of a LINK, you pull up the FILE, and UPLOAD the client, unbeknownst to you however, your world isn't the only one that recieved the new client you made: CHIVVYCONFIDANTE. (commissioned by marinik)",
             "client": "pesterchum",
             "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/ChivvyConfidante.zip",
-            "version": 0,
-            "updated_at": 1738245878,
-            "modified_at": 1738266066,
+            "version": 1,
+            "updated_at": 1741303710,
+            "modified_at": 1741389386,
             "created_at": 1738261745,
             "added_at": 1738266066,
             "inherits": "",
-            "size_download": 808236,
+            "size_download": 808233,
             "size_install": 1713345,
             "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/ChivvyConfidante/acceptant-icon.png",
             "images": [],
             "source": "https://github.com/mocchapi/pesterchum-themes",
-            "sha256_download": "6436603cc3a9d77f4d9b7678086e497a659df1b5a1388a913dce2aabbe941edd",
-            "sha256_install": "4491aceed5611d68edf930176045ededc468a3eac68dfc34f5f66c545c015fa8"
+            "sha256_download": "05c66b844bbed7974b03dbbd28fc0a299c39c094a7c6078e4a5c16ea8ff7d339",
+            "sha256_install": "0593e8dbd4de45b5475aee06e9a3ad313911cf880b3a5c56f48ba56f3d8ee1ac"
         }
     ]
 }
