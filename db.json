@@ -2,8 +2,8 @@
     "meta": {
         "format_version": 4,
         "name": "Pesterchum theme repository",
-        "updated_at": 1741303710,
-        "modified_at": 1741389393,
+        "updated_at": 1743858444,
+        "modified_at": 1744327145,
         "description": "Primary general purpose pesterchum theme repo & archive",
         "new_url": "https://example.com/new_database_url.json",
         "info_page": "https://github.com/mocchapi/pesterchum-themes/blob/main/README.md",
@@ -1009,6 +1009,26 @@
             "source": "https://github.com/mocchapi/pesterchum-themes",
             "sha256_download": "05c66b844bbed7974b03dbbd28fc0a299c39c094a7c6078e4a5c16ea8ff7d339",
             "sha256_install": "0593e8dbd4de45b5475aee06e9a3ad313911cf880b3a5c56f48ba56f3d8ee1ac"
+        },
+        {
+            "name": "Declawed",
+            "author": "karmaDagger",
+            "description": "like discord and pesterchum had a shitty baby",
+            "client": "pesterchum",
+            "download": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/themes/pesterchum/Declawed.zip",
+            "version": 0,
+            "updated_at": 1743858444,
+            "modified_at": 1744327140,
+            "created_at": 1744326995,
+            "added_at": 1744327140,
+            "inherits": "pesterchum2.5",
+            "size_download": 412931,
+            "size_install": 537879,
+            "icon": "https://raw.githubusercontent.com/mocchapi/pesterchum-themes/main/sources/pesterchum/Declawed/trayicon.png",
+            "images": [],
+            "source": "https://github.com/mocchapi/pesterchum-themes",
+            "sha256_download": "7f18ef95cabcfa6c993f17abc03ab5a79d5352540f63475ee2b291aa59b642f4",
+            "sha256_install": "69478f93e2f880867de702b906eaf014451cafda712b93d0468d26be9b8fc640"
         }
     ]
 }
